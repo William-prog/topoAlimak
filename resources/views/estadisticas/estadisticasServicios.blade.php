@@ -362,7 +362,7 @@
                     name: "Topo",
                     steps: total_Topo,
                     pictureSettings: {
-                        src: "/img/LogoBlanco.png"
+                        src: "/img/happyUser.JPG"
                     }
                 }
             ];
