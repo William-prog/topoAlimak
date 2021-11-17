@@ -139,8 +139,8 @@
                                     <li>
                                         <a href="/cartaCuarentaHoras" style="cursor: pointer">{{ __('Mantenimiento 40 Hrs   ') }}<i class="fas fa-business-time"></i></a>
                                         <a href="/cartaCientoVeinteHoras" style="cursor: pointer">{{ __('Mantenimiento 120 Hrs   ') }}<i class="fas fa-business-time"></i></a>
-                                        <a href="/mantenimiento/create" style="cursor: pointer">{{ __('Mantenimiento 1000 Hrs   ') }}<i class="fas fa-business-time"></i></a>
-                                        <a href="/mantenimiento/create" style="cursor: pointer">{{ __('Mantenimiento 2000 Hrs   ') }}<i class="fas fa-business-time"></i></a>
+                                        <a href="/cartaCartaMilHoras" style="cursor: pointer">{{ __('Mantenimiento 1000 Hrs   ') }}<i class="fas fa-business-time"></i></a>
+                                        <a href="/cartaCartaDosMilHoras" style="cursor: pointer">{{ __('Mantenimiento 2000 Hrs   ') }}<i class="fas fa-business-time"></i></a>
                                     </li>
                                 </ul>
                             </li>

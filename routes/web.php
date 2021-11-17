@@ -10,6 +10,8 @@ use App\Http\Controllers\RegistroCheckListSeguridadController;
 
 use App\Http\Controllers\RegistroCartaCuarentaHorasController;
 use App\Http\Controllers\RegistroCartaCientoVeinteHorasController;
+use App\Http\Controllers\RegistroCartaMilHorasController;
+use App\Http\Controllers\RegistroCartaDosMilHorasController;
 
 
 use App\Http\Controllers\CheckListController;
@@ -52,6 +54,8 @@ Route::resource('checkListSeguridad', RegistroCheckListSeguridadController::clas
 // REGISTRO DE LAS CARTAS DE MANTENIMIENTO
 Route::resource('cartaCuarentaHoras', RegistroCartaCuarentaHorasController::class);
 Route::resource('cartaCientoVeinteHoras', RegistroCartaCientoVeinteHorasController::class);
+Route::resource('cartaCartaMilHoras', RegistroCartaMilHorasController::class);
+Route::resource('cartaCartaDosMilHoras', RegistroCartaDosMilHorasController::class);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
