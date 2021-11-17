@@ -77,7 +77,6 @@
                     <div class="jbotmio">
                         <script>
                             // Obtencion de datos Horometro.
-                            // const jsonTopoHorometroCartaTres = {!!json_encode($datosHorometro) !!};
                             const jsonTopoHorometroCartaTres = <?php echo json_encode($horometroMilHoras) ?>;
 
                             var HorometroMilHoras = jsonTopoHorometroCartaTres.map(function(e) {
