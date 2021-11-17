@@ -113,7 +113,7 @@
             <div class="row mt-2">
                 <div class="form-group col">
                     <div class="middle" style="display: block;">
-                        <a href="/cartaDosMil/create" style="cursor: pointer" id="saveBut" class="textEspacing btn btn1">{{ __('Registrar Carta     ') }}<i class="fas fa-plus-circle"></i></a>
+                        <a href="/cartaCartaDosMilHoras/create" style="cursor: pointer" id="saveBut" class="textEspacing btn btn1">{{ __('Registrar Carta     ') }}<i class="fas fa-plus-circle"></i></a>
                     </div>
                 </div>
             </div>

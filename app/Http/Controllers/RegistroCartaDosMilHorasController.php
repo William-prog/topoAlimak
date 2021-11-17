@@ -19,7 +19,7 @@ class RegistroCartaDosMilHorasController extends Controller
         $horometroDosMilHoras = horometroDosMilHoras::all();
         $registroCartaDosMilHoras = registroCartaDosMilHoras::all();
 
-        return view('registroCartadDosMilHoras.index', compact('horometroDosMilHoras', 'registroCartaDosMilHoras'));
+        return view('registroCartaDosMilHoras.index', compact('horometroDosMilHoras', 'registroCartaDosMilHoras'));
         
     }
 
@@ -30,7 +30,7 @@ class RegistroCartaDosMilHorasController extends Controller
      */
     public function create()
     {
-        return view('registroCartadDosMilHoras.create');
+        return view('registroCartaDosMilHoras.create');
     }
 
     /**
