@@ -290,11 +290,11 @@
         <div class="card" style="width: 100%;">
             <div class="card-body">
                 <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-                <h5 class="card-title">Horometro</h5>
+                <h5 class="card-title">Horómetro</h5>
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
-                            Horometro Acumulado <span id="horometroTotal" class="badge bg-secondary"></span>
+                            Horómetro Acumulado <span id="horometroTotal" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">

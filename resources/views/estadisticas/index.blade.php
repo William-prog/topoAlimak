@@ -18,7 +18,7 @@
                 <div class="form-group col">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
                         <strong>
-                            <h3> <i class="fas fa-exclamation-circle fa-2x"></i> Informacion General </h3>
+                            <h3> <i class="fas fa-exclamation-circle fa-2x"></i> Información General </h3>
                         </strong>
                     </button>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="form-group col">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <strong>
-                            <h3> <i class="fas fa-stopwatch fa-2x"></i> Horometros </h3>
+                            <h3> <i class="fas fa-stopwatch fa-2x"></i> Horómetros </h3>
                         </strong>
                     </button>
                 </div>
