@@ -154,8 +154,24 @@
 </div>
 
 <style>
-    .card {
-        border: 4 px solid rgba(255, 119, 31, 80%) !important;
+    .card:hover {
+
+        background-color: #3D3D3D;
+        -webkit-transition: background-color 500ms linear;
+        -ms-transition: background-color 500ms linear;
+        transition: background-color 500ms linear;
+
+        border: 4 px solid rgba(255, 119, 31, 80%);
+
+        color: white;
+    }
+
+    .btn:hover{
+        background-color: #FF771F;
+        -webkit-transition: background-color 500ms linear;
+        -ms-transition: background-color 500ms linear;
+        transition: background-color 500ms linear;
+    
     }
 </style>
 
@@ -169,29 +185,29 @@
                         <h5 class="card-title">Servicio a Contratista</h5>
                     </div>
                     <div class="col">
-                        <h5 class="card-title">Mayor Numero de Servicios a Contratistas</h5>
+                        <h5 class="card-title">Mayor Número de Servicios a Contratistas</h5>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             TOPO <span id="totalTOPO" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             TOPO <span id="totalMayorTOPO" id="horometro" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             COYMSA <span id="totalMayorCOYMSA" class="badge bg-secondary"></span>
                         </button>
 
@@ -199,19 +215,19 @@
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             OMyTC <span id="totalOMyTC" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             OMyTC <span id="totalMayorOMyTC" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             Fresnillo PLC <span id="totalPLC" class="badge bg-secondary"></span>
                         </button>
                     </div>
@@ -221,7 +237,7 @@
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
                         </button>
                     </div>
@@ -231,7 +247,7 @@
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             CLM <span id="totalCLM" class="badge bg-secondary"></span>
                         </button>
                     </div>
@@ -241,7 +257,7 @@
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             OSSA <span id="totalOSSA" class="badge bg-secondary"></span>
                         </button>
                     </div>
@@ -293,7 +309,7 @@
                 <h5 class="card-title">Horómetro</h5>
                 <div class="row m-3">
                     <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
                             Horómetro Acumulado <span id="horometroTotal" class="badge bg-secondary"></span>
                         </button>
                     </div>

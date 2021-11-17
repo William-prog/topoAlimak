@@ -23,6 +23,8 @@ use App\Http\Controllers\ReporteCSVController;
 
 use App\Http\Controllers\EstadisticasController;
 
+use App\Http\Controllers\DiagnosticoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +39,16 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - V I S T A S   P A R A   L O S   D O C U M E N6 T O S - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// REGISTRO DE LOS CHECK LIST DE SUPERVICION
+Route::get('/diagnostico/PDF', [DiagnosticoController::class, 'diagnostico']);
+Route::get('/mapaProcesos/PDF', [DiagnosticoController::class, 'mapaProcesos']);
+Route::get('/procedimientoTecnico/PDF', [DiagnosticoController::class, 'procedimientoTecnico']);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

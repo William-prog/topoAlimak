@@ -70,13 +70,13 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="/Procedimiento" style="cursor: pointer">{{ __('Procedimiento Técnico    ') }}</a>
+                                        <a href="/procedimientoTecnico/PDF" style="cursor: pointer">{{ __('Procedimiento Técnico    ') }}</a>
                                     </li>
                                     <li>
-                                        <a href="/Diagnostico" style="cursor: pointer">{{ __('Diagnóstico    ') }}</a>
+                                        <a href="/diagnostico/PDF" style="cursor: pointer">{{ __('Diagnóstico    ') }}</a>
                                     </li>
                                     <li>
-                                        <a href="/Mapa" style="cursor: pointer">{{ __('Mapa de Procesos    ') }}</a>
+                                        <a href="/mapaProcesos/PDF" style="cursor: pointer">{{ __('Mapa de Procesos    ') }}</a>
                                     </li>
                                 </ul>
                             </li>
