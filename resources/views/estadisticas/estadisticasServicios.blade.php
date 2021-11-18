@@ -313,49 +313,49 @@
                     name: "CLM",
                     steps: total_Clm,
                     pictureSettings: {
-                        src: "https://www.amcharts.com/wp-content/uploads/2019/04/rachel.jpg"
+                        src: "/img/phoebe.jpg"
                     }
                 },
                 {
                     name: "TTI",
                     steps: total_Tti,
                     pictureSettings: {
-                        src: "https://www.amcharts.com/wp-content/uploads/2019/04/chandler.jpg"
+                        src: "/img/phoebe.jpg"
                     }
                 },
                 {
                     name: "Ossa",
                     steps: total_Ossa,
                     pictureSettings: {
-                        src: "https://www.amcharts.com/wp-content/uploads/2019/04/chandler.jpg"
+                        src: "/img/phoebe.jpg"
                     }
                 },
                 {
                     name: "Fercons",
                     steps: total_Fercons,
                     pictureSettings: {
-                        src: "https://www.amcharts.com/wp-content/uploads/2019/04/joey.jpg"
+                        src: "/img/phoebe.jpg"
                     }
                 },
                 {
                     name: "Fresnillo",
                     steps: total_Fresnillo,
                     pictureSettings: {
-                        src: "https://www.amcharts.com/wp-content/uploads/2019/04/ross.jpg"
+                        src: "/img/phoebe.jpg"
                     }
                 },
                 {
                     name: "Omytc",
                     steps: total_Omytc,
                     pictureSettings: {
-                        src: "https://www.amcharts.com/wp-content/uploads/2019/04/chandler.jpg"
+                        src: "/img/phoebe.jpg"
                     }
                 },
                 {
                     name: "Coymsa",
                     steps: total_Coymsa,
                     pictureSettings: {
-                        src: "https://www.amcharts.com/wp-content/uploads/2019/04/phoebe.jpg"
+                        src: "/img/phoebe.jpg"
                     }
                 },
                 {

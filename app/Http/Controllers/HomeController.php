@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\horometroCuarentaHoras;
+use App\Models\horometroCientoVeinteHoras;
+use App\Models\horometroMilHoras;
+use App\Models\horometroDosMilHoras;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $horometroCuarentaHoras = horometroCuarentaHoras::all();
+        $horometroCientoVeinteHoras = horometroCientoVeinteHoras::all();
+        $horometroMilHoras = horometroMilHoras::all();
+        $horometroDosMilHoras = horometroDosMilHoras::all();
+
+        return view('home', compact('horometroCuarentaHoras', 'horometroCientoVeinteHoras', 'horometroMilHoras', 'horometroDosMilHoras'));
     }
 }

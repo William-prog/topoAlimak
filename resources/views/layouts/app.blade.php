@@ -20,6 +20,7 @@
     <link href="{{ asset('css/text.css') }}" rel="stylesheet">
     <link href="{{ asset('css/checkbox.css') }}" rel="stylesheet">
     <link href="{{ asset('css/radio.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/circleProgress.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -98,6 +99,9 @@
                                     </li>
                                     <li>
                                         <a href="/supervicion" style="cursor: pointer">{{ __('Supervisión    ') }}<i class="fas fa-paste"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="/home" style="cursor: pointer">{{ __('Mantenimiento    ') }}<i class="fas fa-paste"></i></a>
                                     </li>
                                 </ul>
                             </li>
