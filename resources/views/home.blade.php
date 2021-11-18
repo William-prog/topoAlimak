@@ -64,7 +64,7 @@
 
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Mtto 40Hr</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">Manto 40Hr</h2>
 
                 @php
                 $sumaCuarentaHoras=0;
@@ -93,7 +93,7 @@
         </div>
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Mtto 120Hr</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">Manto 120Hr</h2>
 
                 @php
                 $sumaCientoVeinteHoras=0;
@@ -123,7 +123,7 @@
 
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Mtto 1000Hrs</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">Manto 1000Hrs</h2>
 
                 <!-- Progress bar 3 -->
                 @php
@@ -153,7 +153,7 @@
 
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Mtto 2000Hr</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">Manto 2000Hr</h2>
 
                 <!-- Progress bar 4 -->
                 @php
