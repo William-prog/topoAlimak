@@ -24,7 +24,7 @@
     /* Footer links */
 
     .footer-distributed p.footer-links {
-        font-size: 14px;
+        font-size: 10px;
         font-weight: bold;
         color: #ffffff;
         margin: 0 0 0px;
@@ -111,7 +111,7 @@
     <div class="footer-left">
         
         <p class="footer-links">
-        <img src="/img/LogoBlanco.png" alt="" width="50px">Servicios y Equipos <strong style="color: #FF771F;"> TOPO </strong> S.A. de C.V. Todos los derechos reservados 2021
+        <img src="/img/LogoBlanco.png" alt="" width="30px">Servicios y Equipos <strong style="color: #FF771F;"> TOPO </strong> S.A. de C.V. Todos los derechos reservados 2021
         </p>
     </div>
 
