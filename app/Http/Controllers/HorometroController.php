@@ -22,6 +22,8 @@ class HorometroController extends Controller
     public function index()
     {
         $registroHorometro = horometro::all();
+
+
         return view('horometros.index', compact('registroHorometro'));
     }
 
@@ -33,7 +35,13 @@ class HorometroController extends Controller
     public function create()
     {
         $datosHorometro = horometro::orderBy('id', 'desc')->take(3)->get();
-        return view('registroHorometro.create', compact('datosHorometro'));
+
+        $horometroCuarentaHoras = horometroCuarentaHoras::all();
+        $horometroCientoVeinteHoras = horometroCientoVeinteHoras::all();
+        $horometroMilHoras = horometroMilHoras::all();
+        $horometroDosMilHoras = horometroDosMilHoras::all();
+
+        return view('registroHorometro.create', compact('datosHorometro', 'horometroCuarentaHoras', 'horometroCientoVeinteHoras', 'horometroMilHoras', 'horometroDosMilHoras'));
     }
 
     /**
@@ -50,7 +58,7 @@ class HorometroController extends Controller
         $horometro->turnoHorometro = $request->turnoHorometro;
         $horometro->inicialHorometro = $request->inicialHorometro;
         $horometro->finalHorometro = $request->finalHorometro;
-        $horometro->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro , 2);
+        $horometro->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
         $horometro->save();
 
         // HOROMETROS PARA EL MANTENIMIENTO DE CUARENTA HORAS
@@ -59,7 +67,7 @@ class HorometroController extends Controller
         $horometroCuarentaHoras->turnoHorometro = $request->turnoHorometro;
         $horometroCuarentaHoras->inicialHorometro = $request->inicialHorometro;
         $horometroCuarentaHoras->finalHorometro = $request->finalHorometro;
-        $horometroCuarentaHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro , 2);
+        $horometroCuarentaHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
         $horometroCuarentaHoras->save();
 
         // HOROMETROS PARA EL MANTENIMIENTO DE CIENTO VEINTE HORAS
@@ -68,7 +76,7 @@ class HorometroController extends Controller
         $horometroCientoVeinteHoras->turnoHorometro = $request->turnoHorometro;
         $horometroCientoVeinteHoras->inicialHorometro = $request->inicialHorometro;
         $horometroCientoVeinteHoras->finalHorometro = $request->finalHorometro;
-        $horometroCientoVeinteHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro , 2);
+        $horometroCientoVeinteHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
         $horometroCientoVeinteHoras->save();
 
         // HOROMETROS PARA EL MANTENIMIENTO DE MIL HORAS
@@ -77,7 +85,7 @@ class HorometroController extends Controller
         $horometroMilHoras->turnoHorometro = $request->turnoHorometro;
         $horometroMilHoras->inicialHorometro = $request->inicialHorometro;
         $horometroMilHoras->finalHorometro = $request->finalHorometro;
-        $horometroMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro , 2);
+        $horometroMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
         $horometroMilHoras->save();
 
         // HOROMETROS PARA EL MANTENIMIENTO DE DOS MIL HORAS
@@ -86,7 +94,7 @@ class HorometroController extends Controller
         $horometroDosMilHoras->turnoHorometro = $request->turnoHorometro;
         $horometroDosMilHoras->inicialHorometro = $request->inicialHorometro;
         $horometroDosMilHoras->finalHorometro = $request->finalHorometro;
-        $horometroDosMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro , 2);
+        $horometroDosMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
         $horometroDosMilHoras->save();
 
         $registroHorometro = horometro::all();

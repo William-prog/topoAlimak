@@ -2,43 +2,6 @@
 
 @section('content')
 
-<!-- <div class="row m-3">
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header" style="text-align: center;">{{ __('Mantenimiento de 40 Hrs') }}</div>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header" style="text-align: center;">{{ __('Mantenimiento de 120 Hrs') }}</div>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="row m-3">
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header" style="text-align: center;">{{ __('Mantenimiento de 1000 Hrs') }}</div>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header" style="text-align: center;">{{ __('Mantenimiento de 2000 Hrs') }}</div>
-                <div class="card-body">
-
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 <div class="container py-5">
 
@@ -58,13 +21,13 @@
     <div class="row">
         <!-- For demo purpose -->
         <div class="col-lg-12 mx-auto mb-5 text-black text-center">
-            <h1 class="display-4">Informe de los mantenimiento</h1>
+            <h1 class="display-4">Cartas de mantenimiento</h1>
         </div>
         <!-- END -->
 
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Manto 40Hr</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">40 Horas</h2>
 
                 @php
                 $sumaCuarentaHoras=0;
@@ -93,7 +56,7 @@
         </div>
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Manto 120Hr</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">120 Horas</h2>
 
                 @php
                 $sumaCientoVeinteHoras=0;
@@ -123,7 +86,7 @@
 
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Manto 1000Hrs</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">1000 Horas</h2>
 
                 <!-- Progress bar 3 -->
                 @php
@@ -153,7 +116,7 @@
 
         <div class="col-xl-3 col-lg-6 mb-4">
             <div class=" rounded-lg p-5 shadow cardManteniemito">
-                <h2 class="h6 font-weight-bold text-center mb-4">Manto 2000Hr</h2>
+                <h2 class="h6 font-weight-bold text-center mb-4">2000 Horas</h2>
 
                 <!-- Progress bar 4 -->
                 @php

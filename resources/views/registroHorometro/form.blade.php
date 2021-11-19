@@ -143,15 +143,115 @@
         </div>
     </div>
 
+    @php
+    $sumaCuarentaHoras=0;
+    @endphp
+    @foreach($horometroCuarentaHoras as $horometroacumulado)
+    @php
+    $sumaCuarentaHoras+=$horometroacumulado->totalHorometro;
+    @endphp
+    @endforeach
+
+    @php
+    $sumaCientoVeinteHoras=0;
+    @endphp
+    @foreach($horometroCientoVeinteHoras as $horometroacumulado)
+    @php
+    $sumaCientoVeinteHoras+=$horometroacumulado->totalHorometro;
+    @endphp
+    @endforeach
+
+    @php
+    $sumaMilHoras=0;
+    @endphp
+    @foreach($horometroMilHoras as $horometroacumulado)
+    @php
+    $sumaMilHoras+=$horometroacumulado->totalHorometro;
+    @endphp
+    @endforeach
+
+    @php
+    $sumaDosMilHoras=0;
+    @endphp
+    @foreach($horometroDosMilHoras as $horometroacumulado)
+    @php
+    $sumaDosMilHoras+=$horometroacumulado->totalHorometro;
+    @endphp
+    @endforeach
 
     <div class="form">
         <div class="form-group">
             <div class="row mt-2">
-                <div class="form-group col">
+
+                <style>
+                    .alertaHorometroDiv {
+                        margin: auto;
+                    }
+                    .alertaHorometro {
+
+                    }
+
+                    .alertaHorometro:hover {
+                        background-color: red;
+
+                        -webkit-transition: background-color 500ms linear;
+                        -ms-transition: background-color 500ms linear;
+                        transition: background-color 500ms linear;
+
+                        border: 4 px solid rgba(255, 119, 31, 80%);
+
+                        color: white;
+                    }
+                </style>
+
+                @if($sumaCuarentaHoras >= 38)
+                <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
+                    <div class="alertaHorometro rounded-lg p-1 shadow">
+                        <div class="row mt-2">
+                            <div class="col-2 text-right border-right">
+                                <div class="h4 font-weight-bold mb-0"> <i class="fas fa-exclamation-circle fa-2x"></i> </div>
+                            </div>
+                            <div class="col-6 text-left">
+                                <div class="h4 font-weight-bold mb-0"> Registrar </div><span class="small text-gray">Carta de Mantenimiento 40 Hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
+                @if($sumaCientoVeinteHoras >= 118)
+                <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
+                    <div class="alertaHorometro rounded-lg p-1 shadow">
+                        <div class="row mt-2">
+                            <div class="col-2 text-right border-right">
+                                <div class="h4 font-weight-bold mb-0"> <i class="fas fa-exclamation-circle fa-2x"></i> </div>
+                            </div>
+                            <div class="col-6 text-left">
+                                <div class="h4 font-weight-bold mb-0"> Registrar </div><span class="small text-gray">Carta de Mantenimiento 120 Hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
+                @if($sumaMilHoras >= 9995)
+                <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
+                    <div class="alertaHorometro rounded-lg p-1 shadow">
+                        <div class="row mt-2">
+                            <div class="col-2 text-right border-right">
+                                <div class="h4 font-weight-bold mb-0"> <i class="fas fa-exclamation-circle fa-2x"></i> </div>
+                            </div>
+                            <div class="col-6 text-left">
+                                <div class="h4 font-weight-bold mb-0"> Registrar </div><span class="small text-gray">Carta de Mantenimiento 1000 Hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endif
+                
+                <!-- <div class="form-group col">
                     <div class="middle">
                         <button type="submit" style="cursor: pointer" class="btn btn1">{{ __('Guardar Horómetro     ') }}<i class="fas fa-plus-circle"></i></button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

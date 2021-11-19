@@ -66,7 +66,7 @@
                 </button>
             </div>
         </div>
-        
+
         <table id="dataTableHorometros" class="table table-sm table-hover" cellspacing="0">
             <thead>
                 <tr>
@@ -81,7 +81,13 @@
                 @foreach($registroHorometro as $horometro)
                 <tr>
                     <td>
-                        {{$horometro->fechaHorometro}}
+                        <?php
+                        date_default_timezone_set("America/Mexico_City");
+                        setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
+                        $data['Fecha'] = $horometro->fechaHorometro;
+                        $marca = strtotime($data['Fecha']);
+                        ?>
+                        <?= strftime('%e/%B/%Y', $marca) ?>
                     </td>
                     <td>
                         {{$horometro->turnoHorometro}}

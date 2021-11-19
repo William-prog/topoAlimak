@@ -40,6 +40,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/call', [RegistroServicioController::class, 'fetchEmployee']);
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - V I S T A S   P A R A   L O S   D O C U M E N6 T O S - - - - - - - - - - - - - - - - - - 
