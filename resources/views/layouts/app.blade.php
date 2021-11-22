@@ -21,7 +21,7 @@
     <link href="{{ asset('css/checkbox.css') }}" rel="stylesheet">
     <link href="{{ asset('css/radio.css') }}" rel="stylesheet">
     <link href="{{ asset('css/circleProgress.css') }}" rel="stylesheet">
-
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -190,8 +190,6 @@
                                 <ul class="sub-menu">
                                     <li>
                                         <a href="/mantenimiento" style="cursor: pointer">{{ __('Control de Mantenimiento   ') }}<i class="fas fa-business-time"></i></a>
-                                        <!-- <a href="/proceso/create" style="cursor: pointer">{{ __('/-/-/    ') }}<i class="fas fa-user-plus"></i></a>
-                                        <a href="/seguridad/create" style="cursor: pointer">{{ __('/-/-/    ') }}<i class="fas fa-hand-sparkles"></i></a> -->
                                     </li>
                                 </ul>
                             </li>
@@ -213,10 +211,7 @@
                                     </li>
                                 </ul>
                             </li>
-
                             <!--  -->
-
-
                             @endguest
                             <!--  -->
                             <!--  -->

@@ -71,8 +71,6 @@
                             <label for="fechaHorometro">Fecha: </label>
                             <input type="date" placeholder="00/00/000" class="form-control" name="fechaHorometro" id="fechaHorometro" required>
                         </div>
-                        <!-- </div>
-                    <div class="row mt-2"> -->
                         <div class="form-group col-6">
                             <div class="switch-field">
                                 <div class="switch-title"> <strong> Turno: </strong> </div>
@@ -96,8 +94,6 @@
                 </div>
                 <div class="form-group col-8">
                     <br>
-
-
                     <table class="tabla tablaUsuarios round_table" style="width: 100%;">
                         <thead>
                             <tr>
@@ -136,8 +132,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
-
                 </div>
             </div>
         </div>
@@ -182,14 +176,12 @@
     <div class="form">
         <div class="form-group">
             <div class="row mt-2">
-
                 <style>
                     .alertaHorometroDiv {
                         margin: auto;
                     }
-                    .alertaHorometro {
 
-                    }
+                    .alertaHorometro {}
 
                     .alertaHorometro:hover {
                         background-color: red;
@@ -218,6 +210,7 @@
                     </div>
                 </div>
                 @endif
+
                 @if($sumaCientoVeinteHoras >= 118)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -232,7 +225,8 @@
                     </div>
                 </div>
                 @endif
-                @if($sumaMilHoras >= 9995)
+
+                @if($sumaMilHoras >= 995)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
                         <div class="row mt-2">
@@ -246,16 +240,41 @@
                     </div>
                 </div>
                 @endif
-                
-                <!-- <div class="form-group col">
-                    <div class="middle">
-                        <button type="submit" style="cursor: pointer" class="btn btn1">{{ __('Guardar Horómetro     ') }}<i class="fas fa-plus-circle"></i></button>
+
+                @if($sumaMilHoras >= 1995)
+                <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
+                    <div class="alertaHorometro rounded-lg p-1 shadow">
+                        <div class="row mt-2">
+                            <div class="col-2 text-right border-right">
+                                <div class="h4 font-weight-bold mb-0"> <i class="fas fa-exclamation-circle fa-2x"></i> </div>
+                            </div>
+                            <div class="col-6 text-left">
+                                <div class="h4 font-weight-bold mb-0"> Registrar </div><span class="small text-gray">Carta de Mantenimiento 2000 Hrs</span>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
+                </div>
+                @endif
+
+                @if($sumaCuarentaHoras < 38) 
+                @if($sumaCientoVeinteHoras < 118) 
+                @if($sumaMilHoras < 995) 
+                @if($sumaMilHoras < 1995) 
+                <div class="form-group col">
+                    <div class="middle">
+                        <button type="submit" style="cursor: pointer" class="btn btn1">
+                        {{ __('Guardar Horómetro     ') }}<i class="fas fa-plus-circle"></i>
+                    </button>
+                    </div>
+                </div>
+                @endif
+                @endif
+                @endif
+                @endif
+
             </div>
         </div>
     </div>
-
 </div>
 
 
