@@ -2,7 +2,6 @@
 @section('content')
 <div class="container">
     <h3 class="encabezado">Información General</h3>
-
     <div class="form">
         <div class="row mt-2">
             <div class="form-group col">

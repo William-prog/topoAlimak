@@ -12,6 +12,7 @@ use App\Models\registroCheckListSeguridad;
 
 use App\Models\registroCartaCuarentaHoras;
 use App\Models\registroCartaCientoVeinteHoras;
+use App\Models\registroCartaMilHoras;
 
 use Carbon\Carbon;
 
@@ -98,4 +99,16 @@ class ReportesPDFController extends Controller
 
         return $pdf->stream('pdfEventos.pdf', array("Attachment" => true));
     }
+
+    public function generarReporteCartaMilHoras($id)
+    {
+        $registroCartaMilHoras = new registroCartaMilHoras();
+
+        $datos['registros'] = $registroCartaMilHoras::where('id', $id)->orderBy('created_at', 'asc')->get();
+
+        $pdf = \PDF::loadView('reportesPDF.reporteCartaMilHoras', $datos, compact('id'));
+
+        return $pdf->stream('pdfEventos.pdf', array("Attachment" => true));
+    }
+    
 }

@@ -100,6 +100,7 @@ Route::get('/generarReporteSeguridad/PDF/{id}', [ReportesPDFController::class, '
 // GENERAR REPORTES DE LAS CARTAS DE MANTENIMIENTO 40, 120, 1000, 2000 HRS
 Route::get('/generarReporteCartaCuarentaHoras/PDF/{id}', [ReportesPDFController::class, 'generarReporteCartaCuarentaHoras']);
 Route::get('/generarReporteCartaCientoVeintaHoras/PDF/{id}', [ReportesPDFController::class, 'generarReporteCartaCientoVeintaHoras']);
+Route::get('/generarReporteCartaMilHoras/PDF/{id}', [ReportesPDFController::class, 'generarReporteCartaMilHoras']);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

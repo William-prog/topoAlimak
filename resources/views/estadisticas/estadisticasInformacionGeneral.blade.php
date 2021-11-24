@@ -59,9 +59,11 @@
             return type.fechaRegistroEntrada >= Fecha_Desde && type.fechaRegistroEntrada <= Fecha_Hasta
         });
 
+        
 
 
 
+        
         let cantSalidaTopo = jsonServicioSalidaTopo.filter(function(type, index) {
             return type.fechaRegistroSalida >= Fecha_Desde && type.fechaRegistroSalida <= Fecha_Hasta
         });
@@ -132,9 +134,10 @@
         $("#totalPLC").html(total_Fresnillo);
         $("#totalFERCONS").html(total_Fercons);
         $("#totalOSSA").html(total_Ossa);
+        $("#totalCLM").html(total_Clm);
 
         $("#totalMayorTOPO").html(total_Topo);
-        $("#totalMayorCOYMSA").html(total_Coymsa);
+        $("#totalMayorFresnillo").html(total_Fresnillo);
         $("#totalMayorOMyTC").html(total_Omytc);
 
     }
@@ -166,12 +169,12 @@
         color: white;
     }
 
-    .btn:hover{
+    .btn:hover {
         background-color: #FF771F;
         -webkit-transition: background-color 500ms linear;
         -ms-transition: background-color 500ms linear;
         transition: background-color 500ms linear;
-    
+
     }
 </style>
 
@@ -203,14 +206,13 @@
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
+                            Fresnillo PLC <span id="totalPLC" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            COYMSA <span id="totalMayorCOYMSA" class="badge bg-secondary"></span>
+                            Fresnillo PLC <span id="totalMayorFresnillo" class="badge bg-secondary"></span>
                         </button>
-
                     </div>
                 </div>
                 <div class="row m-3">
@@ -228,7 +230,7 @@
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Fresnillo PLC <span id="totalPLC" class="badge bg-secondary"></span>
+                            FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
@@ -238,7 +240,7 @@
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
+                            COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
@@ -290,31 +292,59 @@
                 return valoresHorometroCuarenta;
             });
 
+            var HorometroPrimera = cantTopoEntradaHorometro.map(function(e) {
+                let valoresHorometroCuarentaPrimera = (e.totalHorometro);
+                return valoresHorometroCuarentaPrimera;
+            });
+
+            var HorometroSegunda = cantTopoSalidaHorometro.map(function(e) {
+                let valoresHorometroCuarentaSegunda = (e.totalHorometro);
+                return valoresHorometroCuarentaSegunda;
+            });
+
             // Suma Horometro
             var summed = 0;
             for (var key in Horometro) {
                 summed = parseFloat(Horometro[key]) + summed;
             };
 
+            var summedP = 0;
+            for (var key in HorometroPrimera) {
+                summedP = parseFloat(Horometro[key]) + summedP;
+            };
+
+            var summedS = 0;
+            for (var key in HorometroSegunda) {
+                summedS = parseFloat(Horometro[key]) + summedS;
+            };
+
             $("#horometroTotal").html(summed.toFixed(2));
+
+            $("#horometroPrimera").html(summedP.toFixed(2));
+            $("#horometroSegunda").html(summedS.toFixed(2));
 
         }
     </script>
 
-
     <div class="col-6">
         <div class="card" style="width: 100%;">
             <div class="card-body">
-                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
                 <h5 class="card-title">Horómetro</h5>
                 <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Horómetro Acumulado <span id="horometroTotal" class="badge bg-secondary"></span>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                            Primera <span id="horometroPrimera" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
-
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            Segunda <span id="horometroSegunda" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            Acumulado <span id="horometroTotal" class="badge bg-secondary"></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -322,7 +352,6 @@
         <br>
         <div class="card" style="width: 100%;">
             <div class="card-body">
-
                 <h5 class="card-title">Cartas de Mantenimiento</h5>
                 <div class="row m-3">
                     <div class="col-12">
@@ -386,7 +415,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>

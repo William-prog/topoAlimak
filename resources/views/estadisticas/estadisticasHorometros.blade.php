@@ -101,7 +101,7 @@
                 data: HorometroSalida,
                 backgroundColor: 'rgba(36, 36, 36, 0.8)',
                 fill: false,
-                borderColor: 'rgb(255, 100, 58)',
+                borderColor: 'rgb(16, 100, 226)',
                 tension: 0.1
             };
 

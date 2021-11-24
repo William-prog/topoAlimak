@@ -61,41 +61,41 @@ class HorometroController extends Controller
         $horometro->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
         $horometro->save();
 
-        // HOROMETROS PARA EL MANTENIMIENTO DE CUARENTA HORAS
-        $horometroCuarentaHoras = new horometroCuarentaHoras();
-        $horometroCuarentaHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
-        $horometroCuarentaHoras->turnoHorometro = $request->turnoHorometro;
-        $horometroCuarentaHoras->inicialHorometro = $request->inicialHorometro;
-        $horometroCuarentaHoras->finalHorometro = $request->finalHorometro;
-        $horometroCuarentaHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
-        $horometroCuarentaHoras->save();
+        // // HOROMETROS PARA EL MANTENIMIENTO DE CUARENTA HORAS
+        // $horometroCuarentaHoras = new horometroCuarentaHoras();
+        // $horometroCuarentaHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
+        // $horometroCuarentaHoras->turnoHorometro = $request->turnoHorometro;
+        // $horometroCuarentaHoras->inicialHorometro = $request->inicialHorometro;
+        // $horometroCuarentaHoras->finalHorometro = $request->finalHorometro;
+        // $horometroCuarentaHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
+        // $horometroCuarentaHoras->save();
 
-        // HOROMETROS PARA EL MANTENIMIENTO DE CIENTO VEINTE HORAS
-        $horometroCientoVeinteHoras = new horometroCientoVeinteHoras();
-        $horometroCientoVeinteHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
-        $horometroCientoVeinteHoras->turnoHorometro = $request->turnoHorometro;
-        $horometroCientoVeinteHoras->inicialHorometro = $request->inicialHorometro;
-        $horometroCientoVeinteHoras->finalHorometro = $request->finalHorometro;
-        $horometroCientoVeinteHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
-        $horometroCientoVeinteHoras->save();
+        // // HOROMETROS PARA EL MANTENIMIENTO DE CIENTO VEINTE HORAS
+        // $horometroCientoVeinteHoras = new horometroCientoVeinteHoras();
+        // $horometroCientoVeinteHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
+        // $horometroCientoVeinteHoras->turnoHorometro = $request->turnoHorometro;
+        // $horometroCientoVeinteHoras->inicialHorometro = $request->inicialHorometro;
+        // $horometroCientoVeinteHoras->finalHorometro = $request->finalHorometro;
+        // $horometroCientoVeinteHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
+        // $horometroCientoVeinteHoras->save();
 
-        // HOROMETROS PARA EL MANTENIMIENTO DE MIL HORAS
-        $horometroMilHoras = new horometroMilHoras();
-        $horometroMilHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
-        $horometroMilHoras->turnoHorometro = $request->turnoHorometro;
-        $horometroMilHoras->inicialHorometro = $request->inicialHorometro;
-        $horometroMilHoras->finalHorometro = $request->finalHorometro;
-        $horometroMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
-        $horometroMilHoras->save();
+        // // HOROMETROS PARA EL MANTENIMIENTO DE MIL HORAS
+        // $horometroMilHoras = new horometroMilHoras();
+        // $horometroMilHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
+        // $horometroMilHoras->turnoHorometro = $request->turnoHorometro;
+        // $horometroMilHoras->inicialHorometro = $request->inicialHorometro;
+        // $horometroMilHoras->finalHorometro = $request->finalHorometro;
+        // $horometroMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
+        // $horometroMilHoras->save();
 
-        // HOROMETROS PARA EL MANTENIMIENTO DE DOS MIL HORAS
-        $horometroDosMilHoras = new horometroDosMilHoras();
-        $horometroDosMilHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
-        $horometroDosMilHoras->turnoHorometro = $request->turnoHorometro;
-        $horometroDosMilHoras->inicialHorometro = $request->inicialHorometro;
-        $horometroDosMilHoras->finalHorometro = $request->finalHorometro;
-        $horometroDosMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
-        $horometroDosMilHoras->save();
+        // // HOROMETROS PARA EL MANTENIMIENTO DE DOS MIL HORAS
+        // $horometroDosMilHoras = new horometroDosMilHoras();
+        // $horometroDosMilHoras->fechaHorometro = Carbon::parse($request->fechaHorometro);
+        // $horometroDosMilHoras->turnoHorometro = $request->turnoHorometro;
+        // $horometroDosMilHoras->inicialHorometro = $request->inicialHorometro;
+        // $horometroDosMilHoras->finalHorometro = $request->finalHorometro;
+        // $horometroDosMilHoras->totalHorometro = number_format($request->finalHorometro - $request->inicialHorometro, 2);
+        // $horometroDosMilHoras->save();
 
         $registroHorometro = horometro::all();
         return view('horometros.index', compact('registroHorometro'));

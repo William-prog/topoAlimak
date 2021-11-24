@@ -177,44 +177,8 @@
                         });
                     </script>
 
-                    <table id="cuarenta" class="table table-sm table-hover" cellspacing="0">
-                        <thead class="">
-                            <tr>
-                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 5%;">No.</th>
-                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Fecha</th>
-                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 20%;">Supervisor</th>
-                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 20%;">Empresa</th>
-                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Turno</th>
-                                <th style="width: 10%;">PDF</th>
-                            </tr>
-                        </thead>
-                        <p style="display:none;"> {{$contador=0}} </p>
-                        <tbody>
-                            @foreach($registroCartaCuarentaHoras as $datoCU)
-                            <tr>
-                                <td>{{$contador = $contador + 1}}</td>
-                                <td>
-                                    <?php
-                                    date_default_timezone_set("America/Mexico_City");
-                                    setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
-                                    $data['Fecha'] = $datoCU->cuarenta_Fecha;
-                                    $marca = strtotime($data['Fecha']);
-                                    ?>
-                                    <?= strftime('%e/%B/%Y', $marca) ?>
-
-                                </td>
-                                <td> {{$datoCU->cuarentaVerificadorForm}} </td>
-                                <td> Servicios y Equipos TOPO S.A de C.V </td>
-                                <td> {{$datoCU->cuarenta_Turno}} </td>
-                                <td>
-                                    <a style="width: 80%; margin: auto; padding: initial; font-size: 1.5em;" href="{{ url('/generarReporteCartaCuarentaHoras/PDF/'.$datoCU->id) }}" target="_blank" class="btn btn-warning">
-                                        <i style="color: red;" class="fas fa-file-pdf" aria-hidden="true"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    
+                    
 
                     <!-- <div id="show-hidden-menu-table">
                     Tabla

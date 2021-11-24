@@ -195,7 +195,7 @@
                         color: white;
                     }
                 </style>
-
+                
                 @if($sumaCuarentaHoras >= 38)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 @endif
-
+                
                 @if($sumaCientoVeinteHoras >= 118)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -225,7 +225,7 @@
                     </div>
                 </div>
                 @endif
-
+                
                 @if($sumaMilHoras >= 995)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -240,7 +240,7 @@
                     </div>
                 </div>
                 @endif
-
+                
                 @if($sumaMilHoras >= 1995)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -255,7 +255,7 @@
                     </div>
                 </div>
                 @endif
-
+                
                 @if($sumaCuarentaHoras < 38) 
                 @if($sumaCientoVeinteHoras < 118) 
                 @if($sumaMilHoras < 995) 
@@ -276,7 +276,5 @@
         </div>
     </div>
 </div>
-
-
 @include('layouts.footer')
 @endsection
