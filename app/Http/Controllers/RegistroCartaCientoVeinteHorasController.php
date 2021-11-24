@@ -21,7 +21,8 @@ class RegistroCartaCientoVeinteHorasController extends Controller
     public function index()
     {
         $horometroCientoVeinteHoras = horometroCientoVeinteHoras::all();
-        $registroCartaCientoVeinteHoras = registroCartaCientoVeinteHoras::all();
+        // $registroCartaCientoVeinteHoras = registroCartaCientoVeinteHoras::all();
+        $registroCartaCientoVeinteHoras = registroCartaCientoVeinteHoras::orderBy('cientoVeinte_Fecha', 'desc')->get();
 
         return view('registroCartaCientoVeinteHoras.index', compact('horometroCientoVeinteHoras', 'registroCartaCientoVeinteHoras'));
     }
