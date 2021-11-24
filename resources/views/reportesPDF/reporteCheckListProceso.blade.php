@@ -70,7 +70,13 @@
             Fecha:
         </td>
         <td colspan="1" style="width: 13.33%; text-align: center;">
-            {{date('d-m-Y')}}
+            <?php
+            date_default_timezone_set("America/Mexico_City");
+            setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
+            $data['Fecha'] = $registro->clp_Fecha;
+            $marca = strtotime($data['Fecha']);
+            ?>
+            <?= strftime('%e/%B/%Y', $marca) ?>
         </td>
         @endif
         @endforeach

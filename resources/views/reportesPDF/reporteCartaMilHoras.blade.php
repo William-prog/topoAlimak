@@ -83,7 +83,15 @@
             Fecha:
         </td>
         <td style="text-align: center;" colspan="">
-            2
+            @foreach($registros as $registro)
+            <?php
+            date_default_timezone_set("America/Mexico_City");
+            setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
+            $data['Fecha'] = $registro->mil_Fecha;
+            $marca = strtotime($data['Fecha']);
+            ?>
+            <?= strftime('%e/%B/%Y', $marca) ?>
+            @endforeach
         </td>
     </tr>
     <tr>

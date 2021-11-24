@@ -83,7 +83,13 @@
             <strong>Fecha: </strong>
             @foreach($registros as $registro)
             @if($id == $registro->id)
-            {{$registro->fechaRegistro}}
+            <?php
+            date_default_timezone_set("America/Mexico_City");
+            setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
+            $data['Fecha'] = $registro->fechaRegistro;
+            $marca = strtotime($data['Fecha']);
+            ?>
+            <?= strftime('%e/%B/%Y', $marca) ?>
             @endif
             @endforeach
         </td>
