@@ -58,7 +58,7 @@ class RegistroServicioController extends Controller
     {
         if ($request->ajax()) {
             $query = $request->get('query');
-            if ($query != '' && empleado::where('numeroEmpleado', '=', $query)->exists()) {
+            if ($query != '' && Empleado::where('numeroEmpleado', '=', $query)->exists()) {
                 $response = DB::table('empleados')->where('numeroEmpleado', 'like', $query)->get();
                 $data = $response;
                 foreach ($data as $key) {
