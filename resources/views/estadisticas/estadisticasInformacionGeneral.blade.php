@@ -136,6 +136,38 @@
         $("#totalOSSA").html(total_Ossa);
         $("#totalCLM").html(total_Clm);
 
+
+
+
+
+
+
+
+
+
+
+        
+        $("#totalTOPOEntrada").html(total_Entrada_Topo);
+        $("#totalCOYMSAEntrada").html(total_Entrada_Coymsa);
+        $("#totalOMyTCEntrada").html(total_Entrada_Omytc);
+        $("#totalPLCEntrada").html(total_Entrada_Fresnillo);
+        $("#totalFERCONSEntrada").html(total_Entrada_Fercons);
+        $("#totalOSSAEntrada").html(total_Entrada_Ossa);
+        $("#totalCLMEntrada").html(total_Entrada_Clm);
+        
+        $("#totalTOPOSalida").html(total_Salida_Topo);
+        $("#totalCOYMSASalida").html(total_Salida_Coymsa);
+        $("#totalOMyTCSalida").html(total_Salida_Omytc);
+        $("#totalPLCSalida").html(total_Salida_Fresnillo);
+        $("#totalFERCONSSalida").html(total_Salida_Fercons);
+        $("#totalOSSASalida").html(total_Salida_Ossa);
+        $("#totalCLMSalida").html(total_Salida_Clm);
+
+
+
+
+        
+
         $("#totalMayorTOPO").html(total_Topo);
         $("#totalMayorFresnillo").html(total_Fresnillo);
         $("#totalMayorOMyTC").html(total_Omytc);
@@ -194,84 +226,84 @@
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            TOPO <span id="totalTOPO" class="badge bg-secondary"></span>
+                            TOPO <span id="totalTOPOEntrada" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            TOPO <span id="totalMayorTOPO" id="horometro" class="badge bg-secondary"></span>
+                            TOPO <span id="totalTOPOSalida" id="horometro" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Fresnillo PLC <span id="totalPLC" class="badge bg-secondary"></span>
+                            Fresnillo PLC <span id="totalPLCEntrada" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Fresnillo PLC <span id="totalMayorFresnillo" class="badge bg-secondary"></span>
+                            Fresnillo PLC <span id="totalPLCSalida" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OMyTC <span id="totalOMyTC" class="badge bg-secondary"></span>
+                            OMyTC <span id="totalOMyTCEntrada" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OMyTC <span id="totalMayorOMyTC" class="badge bg-secondary"></span>
+                            OMyTC <span id="totalOMyTCSalida" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
+                            FERCONS <span id="totalFERCONSEntrada" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
+                            FERCONS <span id="totalFERCONSSalida" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
+                            COYMSA <span id="totalCOYMSAEntrada" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
+                            COYMSA <span id="totalCOYMSASalida" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            CLM <span id="totalCLM" class="badge bg-secondary"></span>
+                            CLM <span id="totalCLMEntrada" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            CLM <span id="totalCLM" class="badge bg-secondary"></span>
+                            CLM <span id="totalCLMSalida" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col-6">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OSSA <span id="totalOSSA" class="badge bg-secondary"></span>
+                            OSSA <span id="totalOSSAEntrada" class="badge bg-secondary"></span>
                         </button>
                     </div>
                     <div class="col">
                         <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OSSA <span id="totalOSSA" class="badge bg-secondary"></span>
+                            OSSA <span id="totalOSSASalida" class="badge bg-secondary"></span>
                         </button>
                     </div>
                 </div>
