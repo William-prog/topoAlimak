@@ -17,15 +17,16 @@
         estadisticasGeneralServicio();
 
         estadisticasGeneralHorometro();
+
+        estadisticasGeneralCartas();
     }
 </script>
 
-
 <script>
     function estadisticasGeneralServicio() {
+
         var Fecha_Desde = $('#Fecha_Desde_General').val();
         var Fecha_Hasta = $('#Fecha_Hasta_General').val();
-
 
         let cantEntradaTopo = jsonServicioEntradaTopo.filter(function(type, index) {
             return type.fechaRegistroEntrada >= Fecha_Desde && type.fechaRegistroEntrada <= Fecha_Hasta
@@ -124,7 +125,18 @@
         var total_Omytc = total_Salida_Omytc + total_Entrada_Omytc;
         var total_Ossa = total_Salida_Ossa + total_Entrada_Ossa;
 
+
+
         var total = total_Topo + total_Fercons + total_Fresnillo + total_Coymsa + total_Clm + total_Tti + total_Omytc + total_Ossa;
+        var totalEntrada = total_Entrada_Topo + total_Entrada_Fercons + total_Entrada_Fresnillo + total_Entrada_Coymsa + total_Entrada_Clm + total_Entrada_Tti + total_Entrada_Omytc + total_Entrada_Ossa;
+        var totalSalida = total_Salida_Topo + total_Salida_Fercons + total_Salida_Fresnillo + total_Salida_Coymsa + total_Salida_Clm + total_Salida_Tti + total_Salida_Omytc + total_Salida_Ossa;
+
+        $("#totalEntrada").html(totalEntrada);
+
+        $("#totalSalida").html(totalSalida);
+
+        $("#totalTotales").html(total);
+
 
         $("#totalServicio").html(total);
 
@@ -135,18 +147,8 @@
         $("#totalFERCONS").html(total_Fercons);
         $("#totalOSSA").html(total_Ossa);
         $("#totalCLM").html(total_Clm);
-
-
-
-
-
-
-
-
-
-
-
         
+
         $("#totalTOPOEntrada").html(total_Entrada_Topo);
         $("#totalCOYMSAEntrada").html(total_Entrada_Coymsa);
         $("#totalOMyTCEntrada").html(total_Entrada_Omytc);
@@ -154,7 +156,7 @@
         $("#totalFERCONSEntrada").html(total_Entrada_Fercons);
         $("#totalOSSAEntrada").html(total_Entrada_Ossa);
         $("#totalCLMEntrada").html(total_Entrada_Clm);
-        
+
         $("#totalTOPOSalida").html(total_Salida_Topo);
         $("#totalCOYMSASalida").html(total_Salida_Coymsa);
         $("#totalOMyTCSalida").html(total_Salida_Omytc);
@@ -162,11 +164,6 @@
         $("#totalFERCONSSalida").html(total_Salida_Fercons);
         $("#totalOSSASalida").html(total_Salida_Ossa);
         $("#totalCLMSalida").html(total_Salida_Clm);
-
-
-
-
-        
 
         $("#totalMayorTOPO").html(total_Topo);
         $("#totalMayorFresnillo").html(total_Fresnillo);
@@ -211,202 +208,6 @@
 </style>
 
 <div class="row m-3">
-
-    <div class="col-6">
-        <div class="card" style="width: 100%;">
-            <div class="card-body">
-                <div class="row m-3">
-                    <div class="col-6">
-                        <h5 class="card-title">Servicio a Contratista Entrada</h5>
-                    </div>
-                    <div class="col">
-                        <h5 class="card-title">Servicio a Contratista Salida</h5>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            TOPO <span id="totalTOPOEntrada" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            TOPO <span id="totalTOPOSalida" id="horometro" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Fresnillo PLC <span id="totalPLCEntrada" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Fresnillo PLC <span id="totalPLCSalida" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OMyTC <span id="totalOMyTCEntrada" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OMyTC <span id="totalOMyTCSalida" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            FERCONS <span id="totalFERCONSEntrada" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            FERCONS <span id="totalFERCONSSalida" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            COYMSA <span id="totalCOYMSAEntrada" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            COYMSA <span id="totalCOYMSASalida" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            CLM <span id="totalCLMEntrada" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            CLM <span id="totalCLMSalida" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OSSA <span id="totalOSSAEntrada" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OSSA <span id="totalOSSASalida" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-6">
-        <div class="card" style="width: 100%;">
-            <div class="card-body">
-                <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-                <div class="row m-3">
-                    <div class="col-6">
-                        <h5 class="card-title">Servicio a Contratista</h5>
-                    </div>
-                    <div class="col">
-                        <h5 class="card-title">Mayor Número de Servicios a Contratistas</h5>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            TOPO <span id="totalTOPO" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            TOPO <span id="totalMayorTOPO" id="horometro" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Fresnillo PLC <span id="totalPLC" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Fresnillo PLC <span id="totalMayorFresnillo" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OMyTC <span id="totalOMyTC" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OMyTC <span id="totalMayorOMyTC" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            CLM <span id="totalCLM" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-
-                    </div>
-                </div>
-                <div class="row m-3">
-                    <div class="col-6">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            OSSA <span id="totalOSSA" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row m-3">
-
-
-
     <script>
         function estadisticasGeneralHorometro() {
             const jsonTopoHorometro = <?php echo json_encode($registroHorometro) ?>;
@@ -461,97 +262,386 @@
 
         }
     </script>
-
-    <div class="col-6">
-        <div class="card" style="width: 100%;">
-            <div class="card-body">
-                <h5 class="card-title">Horómetro</h5>
-                <div class="row m-3">
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
-                            Primera <span id="horometroPrimera" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Segunda <span id="horometroSegunda" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
-                            Acumulado <span id="horometroTotal" class="badge bg-secondary"></span>
-                        </button>
-                    </div>
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Horómetro</h5>
+            <div class="row m-3">
+                <div class="col">
+                    <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary">
+                        Turno Primera <span id="horometroPrimera" class="badge bg-secondary"></span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                        Turno Segunda <span id="horometroSegunda" class="badge bg-secondary"></span>
+                    </button>
+                </div>
+                <div class="col">
+                    <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                        Horometro Acumulado <span id="horometroTotal" class="badge bg-secondary"></span>
+                    </button>
                 </div>
             </div>
         </div>
-        <br>
-        <div class="card" style="width: 100%;">
-            <div class="card-body">
-                <h5 class="card-title">Cartas de Mantenimiento</h5>
-                <div class="row m-3">
-                    <div class="col-12">
-                        <h6 class="card-subtitle mb-2 text-muted">Cartas de mantenimiento 40Hr</h6>
-                        <table id="cuarenta" class="table table-sm table-hover" cellspacing="0">
-                            <thead class="">
-                                <tr>
-                                    <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 5%;">No.</th>
-                                    <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Fecha</th>
-                                    <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Turno</th>
-                                </tr>
-                            </thead>
-                            <p style="display:none;"> {{$contador=0}} </p>
-                            <tbody>
-                                @foreach($registroCartaCuarentaHoras as $datoCU)
-                                <tr>
-                                    <td>{{$contador = $contador + 1}}</td>
-                                    <td>
-                                        <?php
-                                        date_default_timezone_set("America/Mexico_City");
-                                        setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
-                                        $data['Fecha'] = $datoCU->cuarenta_Fecha;
-                                        $marca = strtotime($data['Fecha']);
-                                        ?>
-                                        <?= strftime('%e/%B/%Y', $marca) ?>
+    </div>
+</div>
 
-                                    </td>
-                                    <td> {{$datoCU->cuarenta_Turno}} </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
 
-                    </div>
-                    <div class="col-12">
-                        <h6 class="card-subtitle mb-2 text-muted">Cartas de mantenimiento 120Hr</h6>
-                        <table id="cientoveinte" class="table table-sm table-hover" cellspacing="0">
-                            <thead class="">
-                                <tr>
-                                    <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 5%;">No.</th>
-                                    <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Fecha</th>
-                                    <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 20%;">Turno</th>
-                                </tr>
-                            </thead>
-                            <p style="display:none;"> {{$contador=0}} </p>
-                            <tbody>
-                                @foreach($registroCartaCientoVeinteHoras as $datoCV)
-                                <tr>
-                                    <td>{{$contador = $contador + 1}}</td>
-                                    <td>
-                                        <?php
-                                        date_default_timezone_set("America/Mexico_City");
-                                        setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
-                                        $data['Fecha'] = $datoCV->cientoVeinte_Fecha;
-                                        $marca = strtotime($data['Fecha']);
-                                        ?>
-                                        <?= strftime('%e/%B/%Y', $marca) ?>
-                                    </td>
-                                    <td>{{$datoCV->cientoVeinte_Turno}}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+<style>
+    .pricing-table-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.6em;
+        color: #FFF;
+        margin-top: 15px;
+        text-align: left;
+        margin-bottom: 25px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .pricing-table-title a {
+        font-size: 0.6em;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        clear: both;
+    }
+
+    /** ========================
+ * Contenedor
+ ============================*/
+    .pricing-wrapper {
+        width: 960px;
+        margin: 40px auto 0;
+    }
+
+    .pricing-table {
+        border-top-left-radius: 38px;
+        border-top-right-radius: 38px;
+        margin: 0 10px;
+        text-align: center;
+        width: 300px;
+        float: left;
+        -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+    }
+
+    .pricing-table:hover {
+        -webkit-transform: scale(1.06);
+        -ms-transform: scale(1.06);
+        -o-transform: scale(1.06);
+        transform: scale(1.06);
+    }
+
+    .pricing-title {
+        border-radius: 80px;
+        color: #FFF;
+        background: #e95846;
+        padding: 20px 0;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .pricing-table.recommended .pricing-title {
+        background: #2db3cb;
+    }
+
+    .pricing-table.recommended .pricing-action {
+        background: #2db3cb;
+    }
+
+    .pricing-table.entrada .pricing-title {
+        background: #1C9741;
+    }
+
+    .pricing-table .price {
+        background: #403e3d;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 20px 0;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .pricing-table .price sup {
+        font-size: 10px;
+        position: relative;
+        left: 5px;
+    }
+
+    .table-list {
+        background: #FFF;
+        color: #403d3a;
+    }
+
+    .table-list li {
+        font-size: 1em;
+        font-weight: 700;
+        padding: 12px 8px;
+    }
+
+    .table-list li:before {
+        content: "\f00c";
+        font-family: 'FontAwesome';
+        color: #3fab91;
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        font-size: 16px;
+    }
+
+    .table-list li span {
+        font-weight: 400;
+    }
+
+    .table-list li span.unlimited {
+        color: #FFF;
+        background: #e95846;
+        font-size: 0.9em;
+        padding: 5px 7px;
+        display: inline-block;
+        -webkit-border-radius: 38px;
+        -moz-border-radius: 38px;
+        border-radius: 38px;
+    }
+
+
+    .table-list li:nth-child(2n) {
+        background: #F0F0F0;
+    }
+
+    .table-buy {
+        background: #FFF;
+        padding: 15px;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .table-buy p {
+        float: left;
+        color: #37353a;
+        font-weight: 700;
+        font-size: 2.4em;
+    }
+
+    .table-buy p sup {
+        font-size: 0.5em;
+        position: relative;
+        left: 5px;
+    }
+
+    .table-buy .pricing-action {
+        float: right;
+        color: #FFF;
+        background: #e95846;
+        padding: 10px 16px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        font-weight: 700;
+        font-size: 1.4em;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+        -webkit-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+    }
+
+    .table-buy .pricing-action:hover {
+        background: #cf4f3e;
+    }
+
+    .recommended .table-buy .pricing-action:hover {
+        background: #228799;
+    }
+
+    /** ================
+ * Responsive
+ ===================*/
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .pricing-wrapper {
+            width: 768px;
+        }
+
+        .pricing-table {
+            width: 236px;
+        }
+
+        .table-list li {
+            font-size: 1.3em;
+        }
+
+    }
+
+    @media only screen and (max-width: 767px) {
+        .pricing-wrapper {
+            width: 420px;
+        }
+
+        .pricing-table {
+            display: block;
+            float: none;
+            margin: 0 0 20px 0;
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .pricing-wrapper {
+            width: 300px;
+        }
+    }
+</style>
+
+
+
+<!-- Contenedor -->
+<div class="pricing-wrapper clearfix">
+    <div class="pricing-table entrada">
+        <h3 class="pricing-title">Entradas</h3>
+        <div class="price"> <h3> <sup id="totalEntrada"> </sup> <sup>/ servicios</sup> </h3> </div>
+        <!-- Lista de Caracteristicas / Propiedades -->
+        <ul class="table-list">
+            <li> <span>TOPO</span> <span id="totalTOPOEntrada" class="badge bg-secondary"></span> </li>
+            <li> <span>Fresnillo PLC</span> <span id="totalPLCEntrada" class="badge bg-secondary"></span> </li>
+            <li> <span>OMyTC</span> <span id="totalOMyTCEntrada" class="badge bg-secondary"></span> </li>
+            <li> <span>FERCONS</span> <span id="totalFERCONSEntrada" class="badge bg-secondary"></span> </li>
+            <li> <span>COYMSA</span> <span id="totalCOYMSAEntrada" class="badge bg-secondary"></span> </li>
+            <li> <span>CLM</span> <span id="totalCLMEntrada" class="badge bg-secondary"></span> </li>
+            <li> <span>OSSA</span> <span id="totalOSSAEntrada" class="badge bg-secondary"></span> </li>
+            <!-- <li>Cuentas de correo <span class="unlimited">ilimitadas</span></li> -->
+        </ul>
+    </div>
+
+    <div class="pricing-table recommended">
+        <h3 class="pricing-title">Salidas</h3>
+        <div class="price"> <sup id="totalSalida"> </sup> <sup>/ servicios</sup></div>
+        <!-- Lista de Caracteristicas / Propiedades -->
+        <ul class="table-list">
+            <li> <span>TOPO</span> <span id="totalTOPOSalida" class="badge bg-secondary"></span> </li>
+            <li> <span>Fresnillo PLC</span> <span id="totalPLCSalida" class="badge bg-secondary"></span> </li>
+            <li> <span>OMyTC</span> <span id="totalOMyTCSalida" class="badge bg-secondary"></span> </li>
+            <li> <span>FERCONS</span> <span id="totalFERCONSSalida" class="badge bg-secondary"></span> </li>
+            <li> <span>COYMSA</span> <span id="totalCOYMSASalida" class="badge bg-secondary"></span> </li>
+            <li> <span>CLM</span> <span id="totalCLMSalida" class="badge bg-secondary"></span> </li>
+            <li> <span>OSSA</span> <span id="totalOSSASalida" class="badge bg-secondary"></span> </li>
+        </ul>
+    </div>
+
+    <div class="pricing-table">
+        <h3 class="pricing-title">Totales</h3>
+        <div class="price"> <sup id="totalTotales"> </sup> <sup>/ servicios</sup></div>
+        <!-- Lista de Caracteristicas / Propiedades -->
+        <ul class="table-list">
+            <li> <span>TOPO</span> <span id="totalTOPO" class="badge bg-secondary"></span> </li>
+            <li> <span>Fresnillo PLC</span> <span id="totalPLC" class="badge bg-secondary"></span> </li>
+            <li> <span>OMyTC</span> <span id="totalOMyTC" class="badge bg-secondary"></span> </li>
+            <li> <span>FERCONS</span> <span id="totalFERCONS" class="badge bg-secondary"></span> </li>
+            <li> <span>COYMSA</span> <span id="totalCOYMSA" class="badge bg-secondary"></span> </li>
+            <li> <span>CLM</span> <span id="totalCLM" class="badge bg-secondary"></span> </li>
+            <li> <span>OSSA</span> <span id="totalOSSA" class="badge bg-secondary"></span> </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<script>
+    function estadisticasGeneralCartas() {
+        const jsonCartaCuarentaHoras = <?php echo json_encode($registroCartaCuarentaHoras) ?>;
+        const jsonCartaCientoVeinteHoras = <?php echo json_encode($registroCartaCientoVeinteHoras) ?>;
+
+        var Fecha_Desde = $('#Fecha_Desde_General').val();
+        var Fecha_Hasta = $('#Fecha_Hasta_General').val();
+
+
+        let cantCartaCuarentaHoras = jsonCartaCuarentaHoras.filter(function(type, index) {
+            return type.cuarenta_Fecha >= Fecha_Desde && type.cuarenta_Fecha <= Fecha_Hasta
+        });
+
+        let cantCartaCientoVeinteHoras = jsonCartaCientoVeinteHoras.filter(function(type, index) {
+            return type.cientoVeinte_Fecha >= Fecha_Desde && type.cientoVeinte_Fecha <= Fecha_Hasta
+        });
+
+        console.log(cantCartaCuarentaHoras);
+    }
+</script>
+
+
+
+<div class="row m-3">
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Cartas de Mantenimiento</h5>
+            <div class="row m-3">
+                <div class="col-6">
+                    <h6 class="card-subtitle mb-2 text-muted">Cartas de mantenimiento 40Hr</h6>
+                    <table id="cuarenta" class="table table-sm table-hover" style="background-color: white; border-collapse: collapse; border-radius: 1em; overflow: hidden;" cellspacing="0">
+                        <thead class="">
+                            <tr>
+                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 5%;">No.</th>
+                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Fecha</th>
+                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Turno</th>
+                            </tr>
+                        </thead>
+                        <p style="display:none;"> {{$contador=0}} </p>
+                        <tbody>
+                            @foreach($registroCartaCuarentaHoras as $datoCU)
+                            <tr>
+                                <td>{{$contador = $contador + 1}}</td>
+                                <td>
+                                    <?php
+                                    date_default_timezone_set("America/Mexico_City");
+                                    setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
+                                    $data['Fecha'] = $datoCU->cuarenta_Fecha;
+                                    $marca = strtotime($data['Fecha']);
+                                    ?>
+                                    <?= strftime('%e/%B/%Y', $marca) ?>
+
+                                </td>
+                                <td> {{$datoCU->cuarenta_Turno}} </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="col-6">
+                    <h6 class="card-subtitle mb-2 text-muted">Cartas de mantenimiento 120Hr</h6>
+                    <table id="cientoveinte" class="table table-sm table-hover" style="background-color: white; border-collapse: collapse; border-radius: 1em; overflow: hidden;" cellspacing="0">
+                        <thead class="">
+                            <tr>
+                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 5%;">No.</th>
+                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 10%;">Fecha</th>
+                                <th style="position: sticky; top: 0; background-color: #FEFCFB !important; width: 20%;">Turno</th>
+                            </tr>
+                        </thead>
+                        <p style="display:none;"> {{$contador=0}} </p>
+                        <tbody>
+                            @foreach($registroCartaCientoVeinteHoras as $datoCV)
+                            <tr>
+                                <td>{{$contador = $contador + 1}}</td>
+                                <td>
+                                    <?php
+                                    date_default_timezone_set("America/Mexico_City");
+                                    setlocale(LC_TIME, 'es_VE.UTF-8', 'esp');
+                                    $data['Fecha'] = $datoCV->cientoVeinte_Fecha;
+                                    $marca = strtotime($data['Fecha']);
+                                    ?>
+                                    <?= strftime('%e/%B/%Y', $marca) ?>
+                                </td>
+                                <td>{{$datoCV->cientoVeinte_Turno}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
