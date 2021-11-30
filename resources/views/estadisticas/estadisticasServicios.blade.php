@@ -26,11 +26,11 @@
             </button>
         </div>
         <div class="col">
-            <br>
+            <!-- <br>
             <button form="generarServicioContratistas" style="width: 100%; font-size: 0.8vw; font-weight: 400; font-size: 1rem; color: white; background-color: #002973;" class="btn btn-info">
                 Ver informacion general
                 <i style="color: white;" class="fas fa-exclamation-circle" aria-hidden="true"></i>
-            </button>
+            </button> -->
         </div>
     </div>
 </form>
@@ -56,10 +56,10 @@
 
 <script>
     function generarGrafico() {
-        var Ciclo_Servicio = $('#Ciclo_Servicio').val();
-
         document.getElementById('chartdivEntrada').innerHTML = "";
 
+        var Ciclo_Servicio = $('#Ciclo_Servicio').val();
+        
         if (Ciclo_Servicio == 'Entrada') {
             graficoEntrada();
         }
