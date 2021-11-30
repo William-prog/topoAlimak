@@ -56,7 +56,8 @@ class EstadisticasController extends Controller
         $registroServicioSalidaOmytc = registroServicioSalidaOmytc::all();
         $registroServicioSalidaOssa = registroServicioSalidaOssa::all();
 
-        $registroHorometro = horometro::all();
+        // $registroHorometro = horometro::all();
+        $registroHorometro = horometro::orderBy('fechaHorometro', 'asc')->get();
 
         $registroHorometroCuarentaHoras = horometroCuarentaHoras::all();
         $registroHorometroCientoVeinteHoras = horometroCientoVeinteHoras::all();

@@ -34,7 +34,8 @@ class HorometroController extends Controller
      */
     public function create()
     {
-        $datosHorometro = horometro::orderBy('id', 'desc')->take(3)->get();
+        // $datosHorometro = horometro::orderBy('id', 'desc')->take(3)->get();
+        $datosHorometro = horometro::orderBy('fechaHorometro', 'desc')->take(3)->get();
 
         $horometroCuarentaHoras = horometroCuarentaHoras::all();
         $horometroCientoVeinteHoras = horometroCientoVeinteHoras::all();

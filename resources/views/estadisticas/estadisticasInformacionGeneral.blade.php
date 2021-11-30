@@ -59,11 +59,11 @@
             return type.fechaRegistroEntrada >= Fecha_Desde && type.fechaRegistroEntrada <= Fecha_Hasta
         });
 
-        
 
 
 
-        
+
+
         let cantSalidaTopo = jsonServicioSalidaTopo.filter(function(type, index) {
             return type.fechaRegistroSalida >= Fecha_Desde && type.fechaRegistroSalida <= Fecha_Hasta
         });
@@ -179,6 +179,106 @@
 </style>
 
 <div class="row m-3">
+
+    <div class="col-6">
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <div class="row m-3">
+                    <div class="col-6">
+                        <h5 class="card-title">Servicio a Contratista Entrada</h5>
+                    </div>
+                    <div class="col">
+                        <h5 class="card-title">Servicio a Contratista Salida</h5>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            TOPO <span id="totalTOPO" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            TOPO <span id="totalMayorTOPO" id="horometro" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            Fresnillo PLC <span id="totalPLC" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            Fresnillo PLC <span id="totalMayorFresnillo" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            OMyTC <span id="totalOMyTC" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            OMyTC <span id="totalMayorOMyTC" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            FERCONS <span id="totalFERCONS" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            COYMSA <span id="totalCOYMSA" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            CLM <span id="totalCLM" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            CLM <span id="totalCLM" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-6">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            OSSA <span id="totalOSSA" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" style="width: 100%; text-align: left;" class="btn btn-primary textEspacing">
+                            OSSA <span id="totalOSSA" class="badge bg-secondary"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="col-6">
         <div class="card" style="width: 100%;">
             <div class="card-body">
@@ -270,6 +370,8 @@
             </div>
         </div>
     </div>
+</div>
+<div class="row m-3">
 
 
 
@@ -309,11 +411,13 @@
             };
 
             var summedP = 0;
+            console.log(HorometroPrimera);
             for (var key in HorometroPrimera) {
                 summedP = parseFloat(Horometro[key]) + summedP;
             };
 
             var summedS = 0;
+            console.log(HorometroSegunda);
             for (var key in HorometroSegunda) {
                 summedS = parseFloat(Horometro[key]) + summedS;
             };

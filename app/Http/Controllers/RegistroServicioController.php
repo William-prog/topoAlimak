@@ -31,6 +31,7 @@ use App\Models\Empleado;
 use App\Exports\registroCSV;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class RegistroServicioController extends Controller
 {
