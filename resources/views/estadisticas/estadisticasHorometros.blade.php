@@ -72,7 +72,7 @@
                     if (HorEntr == HorSali) {
                         var H_Entr = parseFloat(HorometroEntrada[HorEntr]);
                         var H_Sali = parseFloat(HorometroSalida[HorSali]);
-                        var H_Tota = H_Entr + H_Sali;
+                        var H_Tota = H_Entr.toFixed(2) + H_Sali.toFixed(2);
                         HotometroFinal.push(H_Tota);
                     }
                 }
