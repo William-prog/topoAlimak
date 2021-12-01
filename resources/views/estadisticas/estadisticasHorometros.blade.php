@@ -35,9 +35,16 @@
                 return type.turnoHorometro == 'Primera' && type.fechaHorometro >= fecha_Desde_Entrada_Horometro && type.fechaHorometro <= fecha_Hasta_Entrada_Horometro
             });
 
+
+            console.log(' - - - - - - - - - - -');
+            console.log(cantTopoEntradaHorometro);
+
             let cantTopoSalidaHorometro = jsonTopoHorometro.filter(function(type, index) {
                 return type.turnoHorometro == 'Segunda' && type.fechaHorometro >= fecha_Desde_Entrada_Horometro && type.fechaHorometro <= fecha_Hasta_Entrada_Horometro
             });
+
+            console.log(' - - - - - - - - - - -');
+            console.log(cantTopoSalidaHorometro);
 
             var HorometroEntrada = cantTopoEntradaHorometro.map(function(e) {
                 if (e.fechaHorometro >= fecha_Desde_Entrada_Horometro && e.fechaHorometro <= fecha_Hasta_Entrada_Horometro) {
@@ -46,6 +53,7 @@
                 }
             });
 
+            console.log(' - - - - - - - - - - -');
             console.log(HorometroEntrada);
 
             var HorometroSalida = cantTopoSalidaHorometro.map(function(e) {
@@ -54,6 +62,9 @@
                     return valoresHorometroSalida;
                 }
             });
+
+            console.log(' - - - - - - - - - - -');
+            console.log(HorometroSalida);
 
             var labels = cantTopoEntradaHorometro.map(function(e) {
                 moment.locale('es');
