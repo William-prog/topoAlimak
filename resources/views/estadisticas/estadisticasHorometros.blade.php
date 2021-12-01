@@ -114,7 +114,7 @@
                 scales: {
                     yAxes: [{
                         ticks: {
-                            max: 15,
+                            max: 10,
                             min: 0
                         }
                     }]
