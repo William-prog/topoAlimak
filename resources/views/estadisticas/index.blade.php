@@ -16,14 +16,14 @@
         <div class="form-group">
             <div class="row mt-2">
                 <div class="form-group col">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
                         <strong>
                             <h3> <i class="fas fa-exclamation-circle fa-2x"></i> Información General </h3>
                         </strong>
                     </button>
                 </div>
                 <div class="form-group col">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <strong>
                             <h3> <i class="fas fa-hard-hat fa-2x"></i> Servicios </h3>
                         </strong>
@@ -42,7 +42,7 @@
 
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 @include('estadisticas.estadisticasServicios')
             </div>
         </div>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="accordion-item">
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 @include('estadisticas.estadisticasInformacionGeneral')
             </div>
         </div>

@@ -9,7 +9,6 @@
     </div>
 </div>
 
-
 <div>
     <canvas id="graficoHorometro"></canvas>
 </div>

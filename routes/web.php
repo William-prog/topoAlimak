@@ -44,7 +44,7 @@ Route::get('/call', [RegistroServicioController::class, 'fetchEmployee']);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-// - - - - - - - - - - - - - - - - V I S T A S   P A R A   L O S   D O C U M E N6 T O S - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - V I S T A S   P A R A   L O S   D O C U M E N T O S - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // REGISTRO DE LOS CHECK LIST DE SUPERVICION
@@ -109,6 +109,7 @@ Route::get('/generarReporteCartaMilHoras/PDF/{id}', [ReportesPDFController::clas
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // GENERAR REPORTE DE HOROMETROS CON RANGO DE FECHAS
 Route::post('/generarReporteContratistasFechas/CSV', [ReporteCSVController::class, 'generarReporteSericioContratista']);
+Route::post('/generarReporteGeneral/CSV', [ReporteCSVController::class, 'generarReporteGeneral']);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

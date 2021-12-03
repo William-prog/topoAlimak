@@ -1,0 +1,57 @@
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+    }
+</style>
+
+<style>
+    .encabezado {
+        font-weight: bold;
+        background-color: gainsboro;
+        text-align: center;
+    }
+
+    .centrar {
+        text-align: center;
+    }
+
+    .izq {
+        text-align: left;
+    }
+</style>
+
+<script>
+    var monto = 1;
+    var precioDolar = 17.10;
+    var pesos = monto * precioDolar;
+    var vueltas = 0;
+    var a = "";
+    while (vueltas < 10) {
+        a += "<tr>" +
+            "<td>" + monto + "</td>" +
+            "<td>" + pesos + "</td>" +
+            "</tr>";
+
+
+        vueltas++;
+        monto++;
+        dolar = vueltas;
+        pesos = monto * precioDolar;
+    }
+
+    document.getElementById("resultado").innerHTML = a;
+</script>
+
+<table>
+    <thead>
+        <tr>
+            <th>Dolar</th>
+            <th>Peso</th>
+        </tr>
+    </thead>
+    <tbody id="resultado">
+    </tbody>
+</table>
+
+
