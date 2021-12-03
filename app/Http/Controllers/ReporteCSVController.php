@@ -112,7 +112,7 @@ class ReporteCSVController extends Controller
 
         $datosGeneralesHorometro = horometro::where('fechaHorometro', '>=', $fechaDG)
             ->where('fechaHorometro', '<=', $fechaHG)
-            ->orderBy('inicialHorometro', 'desc')->get();
+            ->orderBy('inicialHorometro', 'asc')->get();
 
         $datosRegistroServicioEntradaTopo = $request->datoTOPOEntrada;
         $datosRegistroServicioEntradaFercons =  $request->datoFERCONSEntrada;
