@@ -212,7 +212,7 @@
                 <strong> FERCONS </strong>
             </td>
             <td colspan="1" style="text-align: center;">
-                <strong> {{ $datosRegistroServicioSalidaTopo }} </strong>
+                <strong> {{ $datosRegistroServicioSalidaFercons }} </strong>
             </td>
         </tr>
         <tr>
@@ -347,7 +347,7 @@
                 <strong> FERCONS </strong>
             </td>
             <td colspan="1" style="text-align: center;">
-                <strong> {{ $datosRegistroServicioSalidaTopo + $datosRegistroServicioEntradaFercons}} </strong>
+                <strong> {{ $datosRegistroServicioSalidaFercons + $datosRegistroServicioEntradaFercons}} </strong>
             </td>
         </tr>
         <tr>
