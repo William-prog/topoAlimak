@@ -21,7 +21,7 @@
     <link href="{{ asset('css/checkbox.css') }}" rel="stylesheet">
     <link href="{{ asset('css/radio.css') }}" rel="stylesheet">
     <link href="{{ asset('css/circleProgress.css') }}" rel="stylesheet">
-    
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -59,140 +59,21 @@
                                 <a href="{{ route('register') }}">{{ __('Crear cuenta   ') }}<i class="fas fa-user-plus"></i></a>
                             </li>
                             @else
-                            @if( Auth::user()->name != 'Fresnillo PLC')
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle">
 
-                                    {{ __('Generalidades    ') }}
-
-                                    <span class="caret">
-                                        <i class="fas fa-cogs"></i>
-                                    </span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/procedimientoTecnico/PDF" style="cursor: pointer">{{ __('Procedimiento Técnico    ') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="/diagnostico/PDF" style="cursor: pointer">{{ __('Diagnóstico    ') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="/mapaProcesos/PDF" style="cursor: pointer">{{ __('Mapa de Procesos    ') }}</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            @if( Auth::user()->name == 'Administrador')
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle">
-                                    {{ __('Resumen Técnico    ') }} <span class="caret"><i class="fas fa-indent"></i></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/estadisticas" style="cursor: pointer">{{ __('Estadísticas    ') }}<i class="fas fa-chart-bar"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="/informes" style="cursor: pointer">{{ __('Informes    ') }}<i class="fas fa-paste"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="/horometro" style="cursor: pointer">{{ __('Horómetros    ') }}<i class="fas fa-paste"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="/supervicion" style="cursor: pointer">{{ __('Supervisión    ') }}<i class="fas fa-paste"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="/home" style="cursor: pointer">{{ __('Mantenimiento    ') }}<i class="fas fa-paste"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            @endif
-                            @if( Auth::user()->name != 'Administrador' && Auth::user()->name != 'Fresnillo PLC')
-                            <li>
-                                <a href="/informes" style="cursor: pointer">{{ __('Informes    ') }}<i class="fas fa-paste"></i></a>
-                            </li>
-                            @endif
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle"></i> {{ __('Operación    ') }} <span class="caret"><i class="fas fa-user-plus"></i></span></a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/horometro/create" style="cursor: pointer">{{ __('Horómetro     ') }}<i class="fas fa-stopwatch"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="/servicio/create" style="cursor: pointer">{{ __('Usuarios     ') }}<i class="fas fa-plus-circle"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle">
-                                    {{ __('Supervisión    ') }} <span class="caret"><i class="fas fa-clipboard-check"></i></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/checkListOperativa/create" style="cursor: pointer">{{ __('Operativa    ') }}</a>
-                                        <a href="/checkListProceso/create" style="cursor: pointer">{{ __('Proceso    ') }}<i class="fas fa-user-plus"></i></a>
-                                        <a href="/checkListSeguridad/create" style="cursor: pointer">{{ __('Seguridad de Higiene    ') }}<i class="fas fa-hand-sparkles"></i></a>
-                                        <!-- <a href="/" style="cursor: pointer">{{ __('Mantenimiento    ') }}<i class="fas fa-tools"></i></a> -->
-                                    </li>
-                                </ul>
-                            </li>
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle">
-                                    {{ __('Mantenimiento    ') }} <i class="fas fa-tools"></i></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/cartaCuarentaHoras" style="cursor: pointer">{{ __('Mantenimiento 40 Hrs   ') }}<i class="fas fa-business-time"></i></a>
-                                        <a href="/cartaCientoVeinteHoras" style="cursor: pointer">{{ __('Mantenimiento 120 Hrs   ') }}<i class="fas fa-business-time"></i></a>
-                                        <a href="/cartaCartaMilHoras" style="cursor: pointer">{{ __('Mantenimiento 1000 Hrs   ') }}<i class="fas fa-business-time"></i></a>
-                                        <a href="/cartaCartaDosMilHoras" style="cursor: pointer">{{ __('Mantenimiento 2000 Hrs   ') }}<i class="fas fa-business-time"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
+                            @if( Auth::user()->role == 'SuperAdministrador')
+                            @include('layouts.superAdmin')
                             @endif
 
-                            @if(Auth::user()->name == 'Fresnillo PLC')
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle">
-                                    {{ __('Generalidades    ') }}
-                                    <span class="caret">
-                                        <i class="fas fa-cogs"></i>
-                                    </span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/Procedimiento" style="cursor: pointer">{{ __('Procedimiento Técnico    ') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="/Diagnostico" style="cursor: pointer">{{ __('Diagnóstico    ') }}</a>
-                                    </li>
-                                    <li>
-                                        <a href="/Mapa" style="cursor: pointer">{{ __('Mapa de Procesos    ') }}</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle">
-                                    {{ __('Resumen Técnico    ') }} <span class="caret"><i class="fas fa-indent"></i></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/estadisticas" style="cursor: pointer">{{ __('Estadísticas    ') }}<i class="fas fa-chart-bar"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="/informes" style="cursor: pointer">{{ __('Informes    ') }}<i class="fas fa-paste"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li style="font-size: 12px;" class="dropdown">
-                                <a href="#" class="sub-menu-toggle">
-                                    {{ __('Mantenimiento    ') }} <i class="fas fa-tools"></i></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/mantenimiento" style="cursor: pointer">{{ __('Control de Mantenimiento   ') }}<i class="fas fa-business-time"></i></a>
-                                    </li>
-                                </ul>
-                            </li>
+                            @if( Auth::user()->role == 'Operador')
+                            @include('layouts.operador')
+                            @endif
+
+                            @if( Auth::user()->role == 'Administrador')
+                            @include('layouts.administrador')
+                            @endif
+
+                            @if( Auth::user()->role == 'Externo')
+                            @include('layouts.externo')
                             @endif
 
                             <li style="font-size: 12px;" class="dropdown">
@@ -211,48 +92,12 @@
                                     </li>
                                 </ul>
                             </li>
-                            <!--  -->
                             @endguest
-                            <!--  -->
-                            <!--  -->
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!-- Modal Formularios-->
         <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -294,170 +139,60 @@
         </div>
         <main class="py-4">
             @yield('content')
+            @guest
+
+            @else
+            @if( Auth::user()->role == 'SuperAdministrador')
+            <style>
+                .btn-flotante {
+                    font-size: 20px;
+                    /* Cambiar el tamaño de la tipografia */
+                    text-transform: uppercase;
+                    /* Texto en mayusculas */
+                    font-weight: bold;
+                    /* Fuente en negrita o bold */
+                    color: #777777;
+                    /* Color del texto */
+                    border-radius: 5px;
+                    /* Borde del boton */
+                    letter-spacing: 2px;
+                    /* Espacio entre letras */
+                    background-color: #ffffff;
+                    /* Color de fondo */
+                    padding: 10px 10px;
+                    /* Relleno del boton */
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    transition: all 300ms ease 0ms;
+                    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                    z-index: 99;
+                }
+
+                .btn-flotante:hover {
+                    background-color: #000;
+                    color: #FFFFFF;
+                    /* Color de fondo al pasar el cursor */
+                    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+                    transform: translateY(-7px);
+                }
+
+                @media only screen and (max-width: 600px) {
+                    .btn-flotante {
+                        font-size: 14px;
+                        padding: 12px 20px;
+                        bottom: 20px;
+                        right: 20px;
+                    }
+                }
+            </style>
+            <a href="{{ '/logued' }}" class="btn-flotante">
+                <i class="fas fa-user-secret fas-1x"></i>
+            </a>
+            @endif
+            @endguest
         </main>
     </div>
 </body>
 
 </html>
-
-<!-- MODAL -->
-<style>
-    a {
-        text-decoration: none !important;
-    }
-
-    .welcome-message .borderBtn {
-        position: absolute;
-        top: 300%;
-        left: 45%;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1.05em;
-        color: white;
-        padding: 1.45em 3.35em;
-        border-radius: 0.25em;
-        background: rgba(195, 40, 40, 1);
-    }
-
-    .borderBtn:hover {
-        color: white;
-        background-color: #363B3F;
-    }
-
-    .container .btn-lg {
-        background: rgba(195, 40, 40, 1);
-        border: 0.05em solid rgba(195, 40, 40, .7);
-        color: white;
-    }
-
-    .container .btn-lg:hover {
-        background: white;
-        border: 0.05em solid rgba(195, 40, 40, 1);
-        color: rgba(195, 40, 40, 1);
-    }
-
-    .modal-body .form-control {
-        border-radius: 0.35em;
-        margin-right: 0.25em;
-        padding: 0.15em;
-    }
-
-    .modal-body .form-group label {
-        margin-left: 0.35em;
-    }
-
-    .modal-header {
-        background: linear-gradient(to bottom right, #ff781f, white);
-    }
-
-    .modal-body .form-group {
-        text-align: center;
-    }
-
-    .close {
-        color: white !important;
-        opacity: 0.8 !important;
-    }
-
-    .mohe {
-        position: relative;
-        display: block;
-        color: white;
-        float: left;
-        padding: 0.75em;
-    }
-
-    .mohe:after {
-        position: absolute;
-        content: "";
-        top: -1.45em;
-        bottom: -1.45em;
-        right: -7.15em;
-        border-left: 0.05em solid rgba(0, 0, 0, 0.2);
-        border-right: 0.05em solid rgba(255, 255, 255, 0.7);
-        transform: rotate(25deg);
-    }
-
-    .divIcon {
-        margin: 9%;
-        font-size: 20px;
-        /* Cambiar el tamaño de la tipografia */
-        text-transform: uppercase;
-        /* Texto en mayusculas */
-        font-weight: bold;
-        /* Fuente en negrita o bold */
-        color: #777777;
-        /* Color del texto */
-        border-radius: 5px;
-        /* Borde del boton */
-        letter-spacing: 2px;
-        /* Espacio entre letras */
-        background-color: #ffffff;
-        /* Color de fondo */
-        padding: 10px 10px;
-        /* Relleno del boton */
-        bottom: 20px;
-        right: 20px;
-        transition: all 300ms ease 0ms;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        z-index: 99;
-    }
-
-    .divIcon:hover {
-        background-color: #000;
-        color: #ff781f;
-        /* Color de fondo al pasar el cursor */
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-        transform: translateY(-7px);
-    }
-
-    #link {
-        text-decoration: none;
-    }
-</style>
-
-<style>
-    .modal-backdrop.show {
-        opacity: .5;
-        display: none !important;
-    }
-</style>
-
-<div class="modal fade" id="myModal" role="dialog">
-    <!-- modal dialog -->
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- modal header -->
-            <div class="modal-header">
-                <div class="mohe">
-                    <h2 class="modal-title"> Formulario a llenar</h2>
-                </div>
-            </div>
-            <!-- end modal header-->
-            <!-- modal body -->
-            <div class="modal-body form-group">
-                <div class="row mt-2">
-                    <div class="form-group col">
-                        <a href="/checkList/create">
-                            <div class="col divIcon">
-                                <i class="fas fa-hard-hat fa-7x"></i>
-                                <p>Registro de Servicio</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="form-group col">
-                        <div target="_blank" id="link" href="/viewPdfChart">
-                            <a href="/alimak/create">
-                                <div class="col divIcon">
-                                    <i class="fas fa-parachute-box fa-7x"></i>
-                                    <p>Alimak CheckList</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

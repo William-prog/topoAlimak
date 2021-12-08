@@ -25,6 +25,8 @@ use App\Http\Controllers\EstadisticasController;
 
 use App\Http\Controllers\DiagnosticoController;
 
+use App\Http\Controllers\UsuariosLogueadoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -118,6 +120,14 @@ Route::post('/generarReporteGeneral/CSV', [ReporteCSVController::class, 'generar
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 // GENERAR REPORTE DEL DEL LISTADO EN EL SERVICIO ENTRADA Y SALIDA ALIMAK
 Route::resource('estadisticas', EstadisticasController::class); //
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - U S U A R I O S   L O G U E A D O S - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// GENERAR REPORTE DEL DEL LISTADO EN EL SERVICIO ENTRADA Y SALIDA ALIMAK
+Route::resource('logued', UsuariosLogueadoController::class); //
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

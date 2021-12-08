@@ -51,13 +51,6 @@
     </video>
 </div>
 
-<!-- 
-
-    AN JSO JSUE HSYE JAE JSUFE AHSYE NA,SIEHD KASLEOH SJHF ANC,ALSJ AZMAJSOEURIANSJEUE JSJA LASMCJE AIE CNALSMZIWPASKNCEAIRPASKJNCASJ
-    LAOQWNEWNWN
-    
- -->
-
 <div class="divPrincipal">
     <div class="containerP">
 
@@ -105,7 +98,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <style>
@@ -117,13 +109,11 @@
 
 <style>
     /* GRID */
-
     .six {
         width: 49.2%;
     }
 
     /* COLUMNS */
-
     .col {
         display: block;
         float: left;
@@ -143,7 +133,6 @@
     }
 
     /* CLEARFIX */
-
     .cf:before,
     .cf:after {
         content: " ";
@@ -309,7 +298,6 @@
     .field__input:focus~.field__label-wrap::after {
         opacity: 1;
     }
-es interbenido por dos hombres en medio 
 
     .field__label {
         position: absolute;

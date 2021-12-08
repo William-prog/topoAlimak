@@ -64,17 +64,23 @@
             @guest
 
             @else
-            @if( Auth::user()->name == 'Administrador')
+
+            @if( Auth::user()->role == 'SuperAdministrador')
             @include('informes.registrosUsuariosAdministrador')
             @endif
 
-            @if( Auth::user()->name == 'Fresnillo PLC')
+            @if( Auth::user()->role == 'Administrador')
             @include('informes.registrosUsuariosAdministrador')
             @endif
 
-            @if( Auth::user()->name != 'Administrador' && Auth::user()->name != 'Fresnillo PLC')
+            @if( Auth::user()->role == 'Operador')
             @include('informes.registrosUsuarioUsuario')
             @endif
+
+            @if( Auth::user()->role == 'Externo')
+            @include('informes.registrosUsuariosAdministrador')
+            @endif
+
             @endguest
         </div>
     </div>
