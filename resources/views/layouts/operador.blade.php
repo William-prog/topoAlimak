@@ -18,9 +18,22 @@
     </ul>
 </li>
 
-<li>
-    <a href="/informes" style="cursor: pointer">{{ __('Informes ') }}<i class="fas fa-paste"></i></a>
+
+<li style="font-size: 12px;" class="dropdown">
+    <a href="#" class="sub-menu-toggle">
+        {{ __('Resumen Técnico ') }} <span class="caret"><i class="fas fa-indent"></i></span>
+    </a>
+    <ul class="sub-menu">
+        <li>
+            <a href="/informes" style="cursor: pointer">{{ __('Informes ') }}<i class="fas fa-paste"></i></a>
+        </li>
+        <li>
+            <a href="/horometro" style="cursor: pointer">{{ __('Horómetros ') }}<i class="fas fa-paste"></i></a>
+        </li>
+    </ul>
 </li>
+
+
 
 <li style="font-size: 12px;" class="dropdown">
     <a href="#" class="sub-menu-toggle"></i> {{ __('Operación ') }} <span class="caret"><i
