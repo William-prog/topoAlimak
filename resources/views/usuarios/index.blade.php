@@ -89,7 +89,7 @@
             </table>
         </div>
         <div class="col">
-            <canvas id="myChart" width="auto" height="200%"></canvas>
+            <canvas id="myChart" style="width: 100%;"></canvas>
         </div>
     </div>
 

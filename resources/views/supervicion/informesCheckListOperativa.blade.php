@@ -102,7 +102,7 @@
                 </style>
 
                 <div class="progressCheckList">
-                    <div id="barOperativa" class="progress-bar-CheckList progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo (($registro->SeleccionadosOperativaSi * 100) / 16) ?>%">
+                    <div id="barOperativa" class="progress-bar-CheckList progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo ((intval($registro->SeleccionadosOperativaSi) * 100) / 16) ?>%">
                         <span class="sr-only">0% Complete</span>
                     </div>
                 </div>

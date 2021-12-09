@@ -68,7 +68,7 @@
                     // });
                 </script>
                 <div class="progressCheckList">
-                    <div id="barProceso" class="progress-bar-CheckList progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo (($registro->SeleccionadosProcesoSi * 100) / 20) ?>%">
+                    <div id="barProceso" class="progress-bar-CheckList progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo ((intval($registro->SeleccionadosProcesoSi) * 100) / 20) ?>%">
                     </div>
                 </div>
                 </div>
