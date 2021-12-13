@@ -117,7 +117,17 @@
                         @endphp
                         <div class="col-6 border-right">
                             <div class="h8 font-weight-bold mb-0">
+                                
+                                @if($usuarios->name != 'Sheccid Itzel Diaz Cadena')
                                 {{ $usuarios->name }}
+                                @endif
+                                @if($usuarios->name != 'Itzel Primavera Serrano Ortiz')
+                                {{ $usuarios->name }}
+                                @endif
+                                @if($usuarios->name != 'Amanda Robles Arango')
+                                {{ $usuarios->name }}
+                                @endif
+
                                 @if($usuarios->name == 'Sheccid Itzel Diaz Cadena')
                                 Sheccid
                                 @endif
