@@ -118,6 +118,15 @@
                         <div class="col-6 border-right">
                             <div class="h8 font-weight-bold mb-0">
                                 {{ $usuarios->name }}
+                                @if($usuarios->name == 'Sheccid Itzel Diaz Cadena')
+                                Sheccid
+                                @endif
+                                @if($usuarios->name == 'Itzel Primavera Serrano Ortiz')
+                                Primavera
+                                @endif
+                                @if($usuarios->name == 'Amanda Robles Arango')
+                                Amanda
+                                @endif
                                 <span class="small text-gray">
                                     @foreach($usuariosLogueado as $logued)
                                     @if($usuarios->name == $logued->nombre)
