@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\usuariosLogueado;
+use App\Models\User;
+
 use Illuminate\Http\Request;
 
 class UsuariosLogueadoController extends Controller
@@ -15,7 +17,8 @@ class UsuariosLogueadoController extends Controller
     public function index()
     {
         $usuariosLogueado = usuariosLogueado::all();
-        return view('usuarios.index', compact('usuariosLogueado'));
+        $usuariosRegistrados = User::all();
+        return view('usuarios.index', compact('usuariosLogueado', 'usuariosRegistrados'));
     }
 
     /**

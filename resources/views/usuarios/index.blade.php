@@ -88,15 +88,59 @@
                 </tbody>
             </table>
         </div>
-        <div class="col">
-            <canvas id="myChart" style="width: 100%;"></canvas>
+        <div class="col-5">
+            <style>
+                .cardManteniemito:hover {
+                    background-color: #3D3D3D;
+                    -webkit-transition: background-color 500ms linear;
+                    -ms-transition: background-color 500ms linear;
+                    transition: background-color 500ms linear;
+                    border: 4 px solid rgba(255, 119, 31, 80%);
+
+                    color: white;
+                }
+            </style>
+            <div class="mb-4" style="width: 100%;">
+                <div class=" rounded-lg p-5 shadow cardManteniemito">
+                    <h2 class="h6 font-weight-bold text-center mb-4">40 Horas</h2>
+
+                    <!-- Progress bar 1 -->
+                    <canvas id="myChart"></canvas>
+                    <!-- END -->
+
+                    <!-- Demo info -->
+                    <div class="row text-center mt-4">
+
+                        @foreach($usuariosRegistrados as $usuarios)
+                        @php
+                        $contadorUsuarios=0;
+                        @endphp
+                        <div class="col-6 border-right">
+                            <div class="h8 font-weight-bold mb-0">
+                                {{ $usuarios->name }}
+                                <span class="small text-gray">
+                                    @foreach($usuariosLogueado as $logued)
+                                    @if($usuarios->name == $logued->nombre)
+
+                                    @php
+                                    $contadorUsuarios+=$contadorUsuarios+1;
+                                    @endphp
+
+                                    @endif
+                                    @endforeach
+                                    {{$contadorUsuarios}}
+                                </span>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <!-- END -->
+                </div>
+            </div>
         </div>
     </div>
 
-
     <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="70cf02be0b65b144043f4959-|49" defer=""></script>
-
-
 
     <script>
         const jsonUsuariosLogueado = <?php echo json_encode($usuariosLogueado) ?>;
@@ -109,9 +153,7 @@
         let cantExterno = jsonUsuariosLogueado.filter(function(type, index) {
             return type.rol == 'Externo'
         });
-        
     </script>
-
 
     <script>
         const ctx = document.getElementById('myChart').getContext('2d');
