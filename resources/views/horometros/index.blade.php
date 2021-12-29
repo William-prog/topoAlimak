@@ -108,5 +108,6 @@
     </form>
 </div>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="70cf02be0b65b144043f4959-|49" defer=""></script>
+
 @include('layouts.footer')
 @endsection
