@@ -256,10 +256,6 @@
                 </div>
                 @endif
                 
-                @if($sumaCuarentaHoras < 38) 
-                @if($sumaCientoVeinteHoras < 118) 
-                @if($sumaMilHoras < 995) 
-                @if($sumaMilHoras < 1995) 
                 <div class="form-group col">
                     <div class="middle">
                         <button type="submit" style="cursor: pointer" class="btn btn1">
@@ -267,11 +263,7 @@
                     </button>
                     </div>
                 </div>
-                @endif
-                @endif
-                @endif
-                @endif
-
+                
             </div>
         </div>
     </div>

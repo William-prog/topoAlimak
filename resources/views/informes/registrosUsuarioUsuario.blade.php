@@ -23,7 +23,7 @@
                 $data['Fecha'] = $registro->fechaRegistro;
                 $marca = strtotime($data['Fecha']);
                 ?>
-                <?= strftime('%B/%e/%Y', $marca) ?>
+                <?= strftime('%e/%B/%Y', $marca) ?>
             </td>
             <td> {{$registro->nomOperador}} </td>
             <td> {{$registro->encargado}} </td>

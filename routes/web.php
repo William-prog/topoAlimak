@@ -20,7 +20,7 @@ use App\Http\Controllers\InformesController;
 
 use App\Http\Controllers\ReportesPDFController;
 use App\Http\Controllers\ReporteCSVController;
-
+    
 use App\Http\Controllers\EstadisticasController;
 
 use App\Http\Controllers\DiagnosticoController;

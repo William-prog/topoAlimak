@@ -27,10 +27,8 @@ class LoginController extends Controller
     */
     public function authenticated(Request $request)
     {
-
         $usuariosLogueado = new usuariosLogueado();
         date_default_timezone_set('America/Mexico_City'); 
-
         $usuariosLogueado->email = $request->email;
         $usuariosLogueado->nombre = \Auth::user()->name;
         $usuariosLogueado->fecha =  Carbon::now()->toDateTimeString();
