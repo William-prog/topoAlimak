@@ -83,8 +83,6 @@ class RegistroCheckListOperativaController extends Controller
         $registroCheckListOperativa->clo_Recibe = $request->input('clo_Recibe');
 
         $registroCheckListOperativa->save();
-
-
         return redirect('checkListOperativa');
     }
 

@@ -163,7 +163,7 @@
                     <td>
                         <select class="form-select" aria-label="Default select example" name="nivelTrabajoS[]" required>
                             <option selected>Seleccione</option>
-                            <option value="Superficie">Superficie</option>
+                            <option value="Superficie" selected>Superficie</option>
                             <option value="530">530</option>
                             <option value="600">600</option>
                             <option value="695">695</option>

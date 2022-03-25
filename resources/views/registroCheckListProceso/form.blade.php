@@ -332,7 +332,7 @@
     </script>
 
 
-    <div class="row mt-2" style="display: block;">
+    <div class="row mt-2" style="display: none;">
         <div class="col">
             <div class="row mt-2">
                 <div class="divCheckList form-group col-10">
@@ -361,12 +361,13 @@
                 <select class="form-select" aria-label="Default select example" name="clp_Supervisor" id="clp_Supervisor" required>
                     <option selected>Seleccione Opcion</option>
                     <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                    <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
-                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
-                    <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
-                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
+                    <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
+                    <!-- <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
+                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option> -->
+                    <!-- <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
+                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option> -->
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
-                    <option value="Armando Estrada González">Armando Estrada González</option>
+                    <!-- <option value="Armando Estrada González">Armando Estrada González</option> -->
                     <option value="Víctor Hugo Ruíz Elizalde">Víctor Hugo Ruíz Elizalde</option>
                 </select>
             </div>
@@ -375,12 +376,13 @@
                 <select class="form-select" aria-label="Default select example" name="clp_Encargado" id="clp_Encargado" required>
                     <option selected>Seleccione Opcion</option>
                     <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                    <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
-                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
-                    <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
-                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
+                    <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
+                    <!-- <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
+                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option> -->
+                    <!-- <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
+                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option> -->
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
-                    <option value="Armando Estrada González">Armando Estrada González</option>
+                    <!-- <!-- <option value="Armando Estrada González">Armando Estrada González</option> --> -->
                     <option value="Víctor Hugo Ruíz Elizalde">Víctor Hugo Ruíz Elizalde</option>
                 </select>
             </div>
@@ -389,12 +391,13 @@
                 <select class="form-select" aria-label="Default select example" name="clp_Operador" id="clp_Operador" required>
                     <option selected>Seleccione Opcion</option>
                     <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                    <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
-                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
-                    <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
-                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
+                    <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
+                    <!-- <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
+                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option> -->
+                    <!-- <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
+                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option> -->
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
-                    <option value="Armando Estrada González">Armando Estrada González</option>
+                    <!-- <!-- <option value="Armando Estrada González">Armando Estrada González</option> --> -->
                     <option value="Víctor Hugo Ruíz Elizalde">Víctor Hugo Ruíz Elizalde</option>
                 </select>
             </div>
@@ -403,10 +406,11 @@
                 <select class="form-select" aria-label="Default select example" name="clp_Operador" id="recibeTurno_Form" required>
                     <option selected>Seleccione Opcion</option>
                     <option value="Amanda Robles Arango">Amanda Robles Arango</option>
+                    <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
                     <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
-                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
+                    <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option> -->
                 </select>
-            </div> -->
+            </div>
         </div>
     </div>
 

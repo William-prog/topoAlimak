@@ -195,7 +195,7 @@
                         color: white;
                     }
                 </style>
-                
+
                 @if($sumaCuarentaHoras >= 38)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 @endif
-                
+
                 @if($sumaCientoVeinteHoras >= 118)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -225,7 +225,7 @@
                     </div>
                 </div>
                 @endif
-                
+
                 @if($sumaMilHoras >= 995)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -240,7 +240,7 @@
                     </div>
                 </div>
                 @endif
-                
+
                 @if($sumaMilHoras >= 1995)
                 <div class="alertaHorometroDiv col-xl-4 col-lg-6 mb-4">
                     <div class="alertaHorometro rounded-lg p-1 shadow">
@@ -255,15 +255,15 @@
                     </div>
                 </div>
                 @endif
-                
+
                 <div class="form-group col">
                     <div class="middle">
                         <button type="submit" style="cursor: pointer" class="btn btn1">
-                        {{ __('Guardar Horómetro     ') }}<i class="fas fa-plus-circle"></i>
-                    </button>
+                            {{ __('Guardar Horómetro     ') }}<i class="fas fa-plus-circle"></i>
+                        </button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>

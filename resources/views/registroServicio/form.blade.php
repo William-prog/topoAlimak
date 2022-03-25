@@ -106,7 +106,7 @@
                 </div>
                 <div class="form-group col-3">
                     <label for="encargado">Encargado: </label>
-                    <input type="text" placeholder="" value="Adán Eliutt Ruíz Morán" class="form-control" name="encargado_Form" id="encargado_Form">
+                    <input type="text" placeholder="" value="Tomas Huerta Palacios" class="form-control" name="encargado_Form" id="encargado_Form">
                     <font style="color:red"> {{ $errors->has('encargado') ?  $errors->first('encargado') : '' }} </font>
                 </div>
             </div>
@@ -119,13 +119,13 @@
                     <select class="form-select" aria-label="Default select example" name="verifico_Form" id="verifico_Form" required>
                         <option selected>Seleccione Opcion</option>
                         <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                        <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
-                        <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
-                        <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
-                        <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
+                        <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
+                        <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
                         <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
-                        <option value="Armando Estrada González">Armando Estrada González</option>
                         <option value="Víctor Hugo Ruíz Elizalde">Víctor Hugo Ruíz Elizalde</option>
+                        <!-- <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option> -->
+                        <!-- <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option> -->
+                        <!-- <option value="Armando Estrada González">Armando Estrada González</option> -->
                     </select>
 
                 </div>
@@ -134,8 +134,9 @@
                     <select class="form-select" aria-label="Default select example" name="recibeTurno_Form" id="recibeTurno_Form" required>
                         <option selected>Seleccione Opcion</option>
                         <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                        <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
-                        <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
+                        <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
+                        <!-- <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option> -->
+                        <!-- <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option> -->
                         <option value="Otro">Otro</option>
                     </select>
                     <script>
