@@ -57,3 +57,5 @@ class reporteServicioContratistasFechas implements FromView
         return view('reporteCSV.reporteServicioContratistas', compact('resultadoFechaTopo', 'datosTopo', 'datosFercons', 'resultadoFechaFercons', 'datosPlc', 'resultadoFechaPlc', 'datosCoymsa', 'resultadoFechaCoymsa', 'datosClm', 'resultadoFechaClm', 'datosTti', 'resultadoFechaTti', 'datosOmytc', 'resultadoFechaOmytc', 'datosOssa', 'resultadoFechaOssa'));
     }
 }
+
+

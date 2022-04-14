@@ -103,18 +103,18 @@ class RegistroCartaCuarentaHorasController extends Controller
 
         $registroCartaCuarentaHoras->save();
 
-        $categorias = horometroCuarentaHoras::sum('totalHorometro');
+        // $categorias = horometroCuarentaHoras::sum('totalHorometro');
 
         DB::table('horometro_cuarenta_horas')->delete();
 
 
-        $horometroCuarentaHorasS = new horometroCuarentaHoras();
-        $horometroCuarentaHorasS->fechaHorometro = Carbon::parse($request->input('cuarenta_Fecha'));
-        $horometroCuarentaHorasS->turnoHorometro = $request->input('cuarenta_Turno');
-        $horometroCuarentaHorasS->inicialHorometro = $request->input('cuarenta_Horo');
-        $horometroCuarentaHorasS->finalHorometro = $request->input('cuarenta_Horo');
-        $horometroCuarentaHorasS->totalHorometro = ($categorias - 40);
-        $horometroCuarentaHorasS->save();
+        // $horometroCuarentaHorasS = new horometroCuarentaHoras();
+        // $horometroCuarentaHorasS->fechaHorometro = Carbon::parse($request->input('cuarenta_Fecha'));
+        // $horometroCuarentaHorasS->turnoHorometro = $request->input('cuarenta_Turno');
+        // $horometroCuarentaHorasS->inicialHorometro = $request->input('cuarenta_Horo');
+        // $horometroCuarentaHorasS->finalHorometro = $request->input('cuarenta_Horo');
+        // $horometroCuarentaHorasS->totalHorometro = ($categorias - 40);
+        // $horometroCuarentaHorasS->save();
 
 
 
