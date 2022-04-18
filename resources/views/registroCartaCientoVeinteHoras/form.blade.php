@@ -472,7 +472,7 @@
                     <option value="Amanda Robles Arango">Amanda Robles Arango</option>
                     <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
-                    <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
+                    <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
                     <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
                     <option value="Armando Estrada González">Armando Estrada González</option>
@@ -486,7 +486,7 @@
                     <option value="Amanda Robles Arango">Amanda Robles Arango</option>
                     <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
-                    <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
+                    <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
                     <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
                     <option value="Armando Estrada González">Armando Estrada González</option>
@@ -500,7 +500,7 @@
                     <option value="Amanda Robles Arango">Amanda Robles Arango</option>
                     <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
-                    <option value="Adán Eliutt Ruíz Morán">Adán Eliutt Ruíz Morán</option>
+                    <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
                     <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
                     <option value="Armando Estrada González">Armando Estrada González</option>
