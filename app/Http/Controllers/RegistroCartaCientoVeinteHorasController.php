@@ -97,7 +97,25 @@ class RegistroCartaCientoVeinteHorasController extends Controller
 
         $registroCartaCientoVeinteHoras->save();
 
+        $sum = horometroCientoVeinteHoras::sum('totalHorometro');
+
+        // echo($sum);
+
         DB::table('horometro_ciento_veinte_horas')->delete();
+        
+        $registroHorometroCientoVeinte = new horometroCientoVeinteHoras();
+        $registroHorometroCientoVeinte->fechaHorometro = $request->input('cientoVeinte_Fecha');
+        $registroHorometroCientoVeinte->turnoHorometro = $request->input('cientoVeinte_Turno');
+        $registroHorometroCientoVeinte->inicialHorometro = $request->input('cientoVeinte_Horo');
+        $registroHorometroCientoVeinte->finalHorometro = $request->input('cientoVeinte_Horo');
+        if ($sum < 120) {
+            $registroHorometroCientoVeinte->totalHorometro = 0;
+        }
+        if ($sum >= 120) {
+            $registroHorometroCientoVeinte->totalHorometro = $sum - 120;
+        }
+        $registroHorometroCientoVeinte->save();
+
 
         return redirect('cartaCientoVeinteHoras');
     }

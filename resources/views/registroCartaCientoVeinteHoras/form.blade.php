@@ -26,7 +26,7 @@
         <div class="row mt-2">
             <div class="form-group col">
                 <label for="cientoVeinte_Tipo"> <strong> Tipo de Mant: </strong> </label>
-                <input type="text" class="form-control" value="40 Hrs" name="cientoVeinte_Tipo" id="cientoVeinte_Tipo">
+                <input type="text" class="form-control" value="120 Hrs" name="cientoVeinte_Tipo" id="cientoVeinte_Tipo">
             </div>
             <div class="form-group col">
                 <label for="cientoVeinte_Horo"> <strong> Horómetro: </strong> </label>

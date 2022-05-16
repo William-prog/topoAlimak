@@ -135,6 +135,7 @@
                         <option selected>Seleccione Opcion</option>
                         <option value="Amanda Robles Arango">Amanda Robles Arango</option>
                         <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
+                        <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
                         <!-- <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option> -->
                         <!-- <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option> -->
                         <option value="Otro">Otro</option>

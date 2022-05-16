@@ -22,13 +22,13 @@
                         </strong>
                     </button>
                 </div>
-                <div class="form-group col">
+                <!-- <div class="form-group col">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <strong>
                             <h3> <i class="fas fa-hard-hat fa-2x"></i> Servicios </h3>
                         </strong>
                     </button>
-                </div>
+                </div> -->
                 <div class="form-group col">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <strong>
