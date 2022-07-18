@@ -126,7 +126,6 @@
     <!--  -->
     <tr>
         <td colspan="1" rowspan="13" style="width: 50% !important;">
-            <!-- <img src="img/topo-logo.jpg" width="50" height=""> -->
             <img src="img/alimak.jpg" height="200" alt="">
             <p style="color: #fff;"> Lorem ipsum dolor sit ame sit ame sit ame sit ame sit ame</p>
         </td>

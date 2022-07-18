@@ -31,12 +31,12 @@
         <li>
             <a href="/horometro" style="cursor: pointer">{{ __('Horómetros ') }}<i class="fas fa-paste"></i></a>
         </li>
-        <li>
+        <!-- <li>
             <a href="/supervicion" style="cursor: pointer">{{ __('Supervisión ') }}<i class="fas fa-paste"></i></a>
         </li>
         <li>
             <a href="/home" style="cursor: pointer">{{ __('Mantenimiento ') }}<i class="fas fa-paste"></i></a>
-        </li>
+        </li> -->
     </ul>
 </li>
 <li style="font-size: 12px;" class="dropdown">
