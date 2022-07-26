@@ -17,7 +17,7 @@
     <link href="{{ asset('css/button.css') }}" rel="stylesheet">
     <link href="{{ asset('css/tabla.css') }}" rel="stylesheet">
     <link href="{{ asset('css/switch.css') }}" rel="stylesheet">
-    <!-- <link href="{{ asset('css/text.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('css/textCopy.css') }}" rel="stylesheet">
     <link href="{{ asset('css/checkbox.css') }}" rel="stylesheet">
     <link href="{{ asset('css/radio.css') }}" rel="stylesheet">
     <link href="{{ asset('css/circleProgress.css') }}" rel="stylesheet">
