@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" type="70cf02be0b65b144043f4959-text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous" type="70cf02be0b65b144043f4959-text/javascript"></script>
-    
+
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/sc-1.4.3/sl-1.2.4/datatables.min.css" />
     <script type="70cf02be0b65b144043f4959-text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/sc-1.4.3/sl-1.2.4/datatables.min.js"></script>
@@ -109,7 +109,14 @@
                         <div class="col-6 border-right">
                             <div class="h8 font-weight-bold mb-0 text-start">
 
-                                @if($usuarios->name != 'Sheccid Itzel Diaz Cadena' && $usuarios->name != 'Itzel Primavera Serrano Ortiz' && $usuarios->name != 'Amanda Robles Arango')
+                                @if($usuarios->name != 'Sheccid Itzel Diaz Cadena'
+                                && $usuarios->name != 'Itzel Primavera Serrano Ortiz'
+                                && $usuarios->name != 'Amanda Robles Arango'
+                                && $usuarios->name != 'José Arturo Guevara De Loera'
+                                && $usuarios->name != 'Victor'
+                                && $usuarios->name != 'Ruben Alvarez De Loera'
+                                && $usuarios->name != 'Luis Bernardo Lopez Cardenas')
+
                                 {{ $usuarios->name }}
                                 @endif
 
