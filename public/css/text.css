@@ -35,6 +35,16 @@ label {
     margin-bottom: 0px;
 }
 
+
+
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+        background-color: #FF771F !important;
+        border-color: #242424 !important;
+}
+
 .page-link {
     position: relative;
     display: block;
@@ -45,14 +55,6 @@ label {
     background-color: #fff;
     border: 1px solid #dee2e6;
 }
-
-.page-item.active .page-link {
-    z-index: 1;
-    color: #fff;
-        background-color: #FF771F !important;
-        border-color: #242424 !important;
-}
-
 
 .canv {
     width: 100% !important;
