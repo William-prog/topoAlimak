@@ -35,10 +35,6 @@ label {
     margin-bottom: 0px;
 }
 
-div.dataTables_wrapper div.dataTables_paginate ul.pagination {
-    display: block !important;
-}
-
 .page-link {
     position: relative;
     display: block;
