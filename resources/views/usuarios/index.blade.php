@@ -115,6 +115,8 @@
                                 && $usuarios->name != 'José Arturo Guevara De Loera'
                                 && $usuarios->name != 'Victor'
                                 && $usuarios->name != 'Ruben Alvarez De Loera'
+                                && $usuarios->name != 'Adan'
+                                && $usuarios->name != 'Isaac'
                                 && $usuarios->name != 'Luis Bernardo Lopez Cardenas')
 
                                 {{ $usuarios->name }}
@@ -124,10 +126,10 @@
                                 Sheccid Diaz
                                 @endif
                                 @if($usuarios->name == 'Itzel Primavera Serrano Ortiz')
-                                Itzel Serrano
+                                Itzel (Deshabilitado)
                                 @endif
                                 @if($usuarios->name == 'Amanda Robles Arango')
-                                Amanda Robles
+                                Amanda (Deshabilitado)
                                 @endif
                                 @if($usuarios->name == 'José Arturo Guevara De Loera')
                                 José Guevara
@@ -140,6 +142,12 @@
                                 @endif
                                 @if($usuarios->name == 'Luis Bernardo Lopez Cardenas')
                                 Luis Lopez
+                                @endif
+                                @if($usuarios->name == 'Adan')
+                                Adan (Deshabilitado)
+                                @endif
+                                @if($usuarios->name == 'Isaac')
+                                Isaac (Deshabilitado)
                                 @endif
 
 
