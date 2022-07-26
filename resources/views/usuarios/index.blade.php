@@ -114,13 +114,25 @@
                                 @endif
 
                                 @if($usuarios->name == 'Sheccid Itzel Diaz Cadena')
-                                Sheccid
+                                Sheccid Diaz
                                 @endif
                                 @if($usuarios->name == 'Itzel Primavera Serrano Ortiz')
-                                Primavera
+                                Itzel Serrano
                                 @endif
                                 @if($usuarios->name == 'Amanda Robles Arango')
-                                Amanda
+                                Amanda Robles
+                                @endif
+                                @if($usuarios->name == 'José Arturo Guevara De Loera')
+                                José Guevara
+                                @endif
+                                @if($usuarios->name == 'Victor')
+                                Victor Ruiz
+                                @endif
+                                @if($usuarios->name == 'Ruben Alvarez De Loera')
+                                Ruben Alvarez
+                                @endif
+                                @if($usuarios->name == 'Luis Bernardo Lopez Cardenas')
+                                Luis Lopez
                                 @endif
 
 
