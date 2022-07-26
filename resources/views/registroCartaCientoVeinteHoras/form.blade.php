@@ -469,42 +469,39 @@
                 <label>Operador: </label>
                 <select class="form-select" aria-label="Default select example" name="cientoVeinteOperadorForm" id="cientoVeinteOperadorForm" required>
                     <option selected>Seleccione Opcion</option>
-                    <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                    <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
                     <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
-                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
+                    <option value="José Arturo Guevara De Loera">José Arturo Guevara De Loera</option>
+                    <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
-                    <option value="Armando Estrada González">Armando Estrada González</option>
                     <option value="Víctor Hugo Ruíz Elizalde">Víctor Hugo Ruíz Elizalde</option>
+                    <option value="Rito Valtierra Ortiz">Rito Valtierra Ortiz</option>
                 </select>
             </div>
             <div class="form-group col">
                 <label>Verificador: </label>
                 <select class="form-select" aria-label="Default select example" name="cientoVeinteVerificadorForm" id="cientoVeinteVerificadorForm" required>
                     <option selected>Seleccione Opcion</option>
-                    <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                    <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
                     <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
-                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
+                    <option value="José Arturo Guevara De Loera">José Arturo Guevara De Loera</option>
+                    <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
-                    <option value="Armando Estrada González">Armando Estrada González</option>
                     <option value="Víctor Hugo Ruíz Elizalde">Víctor Hugo Ruíz Elizalde</option>
+                    <option value="Rito Valtierra Ortiz">Rito Valtierra Ortiz</option>
                 </select>
             </div>
             <div class="form-group col">
                 <label>Encargado: </label>
                 <select class="form-select" aria-label="Default select example" name="cientoVeinteEncargadoForm" id="cientoVeinteEncargadoForm" required>
                     <option selected>Seleccione Opcion</option>
-                    <option value="Amanda Robles Arango">Amanda Robles Arango</option>
-                    <option value="Itzel Primavera Serrano Ortiz">Itzel Primavera Serrano Ortiz</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
                     <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
-                    <option value="Diana Denisse Estrada Arenas">Diana Denisse Estrada Arenas</option>
+                    <option value="José Arturo Guevara De Loera">José Arturo Guevara De Loera</option>
+                    <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
                     <option value="Roberto Moreira Alvarado">Roberto Moreira Alvarado</option>
-                    <option value="Armando Estrada González">Armando Estrada González</option>
                     <option value="Víctor Hugo Ruíz Elizalde">Víctor Hugo Ruíz Elizalde</option>
+                    <option value="Rito Valtierra Ortiz">Rito Valtierra Ortiz</option>
                 </select>
             </div>
         </div>

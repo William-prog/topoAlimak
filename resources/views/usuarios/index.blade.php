@@ -6,13 +6,14 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js" integrity="sha256-D2tkh/3EROq+XuDEmgxOLW1oNxf0rLNlOwsPIUX+co4=" crossorigin="anonymous"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" type="70cf02be0b65b144043f4959-text/javascript"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" type="70cf02be0b65b144043f4959-text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous" type="70cf02be0b65b144043f4959-text/javascript"></script>
+    
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/sc-1.4.3/sl-1.2.4/datatables.min.css" />
     <script type="70cf02be0b65b144043f4959-text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/sc-1.4.3/sl-1.2.4/datatables.min.js"></script>
@@ -21,33 +22,24 @@
         $(document).ready(function() {
             var table = $('#dataTableUsuarios').DataTable({
                 pagingType: 'full_numbers',
-                pageLength: 10,
+                paging: true,
                 lengthMenu: [10, 15, 20, 100],
+                pageLength: 10,
                 select: 'single',
                 "language": {
                     "search": "Buscar&nbsp;:",
-                    "lengthMenu": "Mostrar _MENU_ Formularios",
+                    "lengthMenu": "Mostrar _MENU_ Usuarios",
                     "zeroRecords": "Dato no encontrado",
                     "info": "Pagina _PAGE_ de _PAGES_",
-                    "infoEmpty": "No hay formularios disponibles",
-                    "infoFiltered": "(filtrado de _MAX_ Formularios)",
+                    "infoEmpty": "No existe el dato",
+                    "infoFiltered": "(filtrado de _MAX_ usuarios)",
                     "paginate": {
                         "first": "Primero",
                         "last": "Ultimo",
                         "previous": "Anterior",
                         "next": "Siguiente"
-                    },
-                    select: {
-                        rows: {
-                            _: ""
-                        }
                     }
                 }
-            })
-
-            $('#btToggleDisplay').on('click', function() {
-                $("#dataTableUsuarios").toggleClass('cards')
-                $("#dataTableUsuarios thead").toggle()
             })
         });
     </script>
@@ -60,8 +52,8 @@
                         <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 5%;">No.</th>
                         <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 10%;">Fecha</th>
                         <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 10%;">Hora</th>
-                        <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 10%;">Num</th>
-                        <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 20%;">Nombre</th>
+                        <!-- <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 10%;">Num</th> -->
+                        <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 30%;">Nombre</th>
                         <th style="position: sticky; top: 0;     background-color: #FEFCFB !important; width: 20%;">Rol</th>
                     </tr>
                 </thead>
@@ -80,7 +72,7 @@
                             <?= strftime('%e/%B/%Y', $marca) ?>
                         </td>
                         <td> {{$usuario->hora}} </td>
-                        <td> {{$usuario->email}} </td>
+                        <!-- <td> {{$usuario->email}} </td> -->
                         <td> {{$usuario->nombre}} </td>
                         <td> {{$usuario->rol}} </td>
                     </tr>
@@ -102,7 +94,6 @@
             </style>
             <div class="mb-4" style="width: 100%;">
                 <div class=" rounded-lg p-5 shadow cardManteniemito">
-                    <h2 class="h6 font-weight-bold text-center mb-4">40 Horas</h2>
 
                     <!-- Progress bar 1 -->
                     <canvas id="myChart"></canvas>
@@ -116,7 +107,7 @@
                         $contadorUsuarios=0;
                         @endphp
                         <div class="col-6 border-right">
-                            <div class="h8 font-weight-bold mb-0">
+                            <div class="h8 font-weight-bold mb-0 text-start">
 
                                 @if($usuarios->name != 'Sheccid Itzel Diaz Cadena' && $usuarios->name != 'Itzel Primavera Serrano Ortiz' && $usuarios->name != 'Amanda Robles Arango')
                                 {{ $usuarios->name }}
@@ -138,7 +129,7 @@
                                     @if($usuarios->name == $logued->nombre)
 
                                     @php
-                                    $contadorUsuarios+=$contadorUsuarios+1;
+                                    $contadorUsuarios += 1;
                                     @endphp
 
                                     @endif

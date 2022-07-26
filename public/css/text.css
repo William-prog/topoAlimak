@@ -36,8 +36,27 @@ label {
 }
 
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {
-    display: none !important;
+    /* display: none !important; */
 }
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: black !important;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+        background-color: #FF771F !important;
+        border-color: #242424 !important;
+}
+
 
 .canv {
     width: 100% !important;

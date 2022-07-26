@@ -16,7 +16,7 @@ class UsuariosLogueadoController extends Controller
      */
     public function index()
     {
-        $usuariosLogueado = usuariosLogueado::all();
+        $usuariosLogueado = usuariosLogueado::orderBy('id', 'desc')->get();
         $usuariosRegistrados = User::all();
         return view('usuarios.index', compact('usuariosLogueado', 'usuariosRegistrados'));
     }
