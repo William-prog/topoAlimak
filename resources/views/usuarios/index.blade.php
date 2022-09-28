@@ -118,7 +118,6 @@
                                 && $usuarios->name != 'Adan'
                                 && $usuarios->name != 'Isaac'
                                 && $usuarios->name != 'Luis Bernardo Lopez Cardenas')
-
                                 {{ $usuarios->name }}
                                 @endif
 
