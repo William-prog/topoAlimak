@@ -275,6 +275,8 @@
                     <option selected>Seleccione Opcion</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
                     <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
+                    <option value="Isaac Yamin Garcia Hernandez">Isaac Yamin Garcia Hernandez</option>
+                    <option value="Emmanuel Marquez Carrillo">Emmanuel Marquez Carrillo</option>
                     <option value="Rito Valtierra Ortiz">Rito Valtierra Ortiz</option>
                     <option value="José Arturo Guevara De Loera">José Arturo Guevara De Loera</option>
                     <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
@@ -288,6 +290,8 @@
                     <option selected>Seleccione Opcion</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
                     <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
+                    <option value="Isaac Yamin Garcia Hernandez">Isaac Yamin Garcia Hernandez</option>
+                    <option value="Emmanuel Marquez Carrillo">Emmanuel Marquez Carrillo</option>
                     <option value="Rito Valtierra Ortiz">Rito Valtierra Ortiz</option>
                     <option value="José Arturo Guevara De Loera">José Arturo Guevara De Loera</option>
                     <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
@@ -302,6 +306,8 @@
                     <option selected>Seleccione Opcion</option>
                     <option value="Sheccid Itzel Diaz Cadena">Sheccid Itzel Diaz Cadena</option>
                     <option value="Tomas Huerta Palacios">Tomas Huerta Palacios</option>
+                    <option value="Isaac Yamin Garcia Hernandez">Isaac Yamin Garcia Hernandez</option>
+                    <option value="Emmanuel Marquez Carrillo">Emmanuel Marquez Carrillo</option>
                     <option value="Rito Valtierra Ortiz">Rito Valtierra Ortiz</option>
                     <option value="José Arturo Guevara De Loera">José Arturo Guevara De Loera</option>
                     <option value="Ruben Alvarez De Loera">Ruben Alvarez De Loera</option>
